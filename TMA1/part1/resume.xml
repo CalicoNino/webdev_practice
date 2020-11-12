@@ -3,15 +3,74 @@
 
 <resume>
     <introduction>
+        <firstname>Karim</firstname>
+        <lastname>El Shenawy</lastname>
+        <address>
+            <city>Milton</city>
+            <province>Ontario</province>
+            <postal>L9T0C9</postal>
+        </address>
+        <contactno>14168244516</contactno>
+        <email>elshenak@mcmaster.ca</email>
+        <linkedin>/elshenak</linkedin>
+        <github>/elninokr</github>
+        <website>elninokr.com</website>
     </introduction>
     <work>
+        <postion>
+            <title>Security Development Student</title>
+            <company>Blackberry QNX</company>
+            <date>Jan 20' - April 20'</date>
+            <description>
+                    • Designing and integrating unit test cases in Python using Pytest framework for the core QNX Operating System
+                    • Implementing a Jenkins Pipeline to setup automated test environments
+                    • Assisting Developers in developing automation tools in C and resolving defects
+            </description>
+        </position>
+        <postion>
+            <title>Student, Information System Cybersecurity</title>
+            <company>Canadian Natural Resources Limited (CNRL)</company>
+            <date>May 19' - Aug 19'</date>
+            <description>
+                    • Developed a Phishing Tool that sends fraudulent email campaigns against 15 000 employees as a part of phishing awareness training. Automated results into CSV reports. Built using Python and PHP
+                    • Devised weekly Security Scans using Nessus Professional to ensure CIS compliance and identify vulnerabilities
+                    • Managed Forescout CounterACT and Palo Alto Panorama Firewall in order to monitor and control internet traffic and to protect production systems
+                    • Generated reports and tickets containing QIDs, CVEs, and other vulnerabilities for the mitigation teams
+            </description>
+        </position>
     </work>
     <skills>
+        <programming>Python, Java, C, C++, JavaScript, MATLAB, Bash, PowerShell, Verilog, HTML, CSS</programming>
+        <framework>Django, React, Bootstrap, NumPy, OpenCV, TensorFlow</framework>
+        <technologies>Git, LaTeX, Eclipse IDE, SVN, db2, MySQL</technologies>
+        <sectools>Nessus, Wireshark, Metasploit, Nmap, Burp Suite</sectools>
+        <interests>Software Development, Cryptography, Machine Learning, Computer and Network Security</interests>
     </skills>
     <projects>
+        <project>
+            <name>Stock Predictor</name>
+            <language>Python</language>
+            <content>
+                    • Developed a web application that displays and analyses current stock prices and currency exchange values using the Alpha Vantage API which generates current and historical data
+                    • Utilizes Long-short term memory (LSTM) Recurrent Neural Network to give predications of future stock prices
+                    • Built front-end using Django framework.
+            </content>
+        </project>
+        <project>
+            <name>Least Bit Encryption</name>
+            <language>Python</language>
+            <content>
+                Developed a Linux Command line tool application that encrypt and decrypts text in images using the Least Significant Bit algorithm, built using OpenCV.
+            </content>
+        </project>
+        <project>
+            <name>Cipho</name>
+            <language>Java</language>
+            <content>
+                Developed a Windows application that encrypts and decrypts text and textfiles using various cryptographic algorithms and performs Statistical methods for decryption.
+            </content>
+        </project>
     </projects>
-    <extracurriculars>
-    </extracurriculars>
-    <certifications>
-    </certifications>
+    <education>
+    </education>
 </resume>
