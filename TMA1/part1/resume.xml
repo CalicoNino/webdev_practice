@@ -72,5 +72,11 @@
         </project>
     </projects>
     <education>
+        <school>
+            <name>McMaster University</name>
+            <degree>Bachelor of Engineering in Software Engineering w/ CO-OP</degree>
+            <date>Sept 16' - May 21'</date>
+            <minor>Mathematics Minor</minor>
+        </school>
     </education>
 </resume>
