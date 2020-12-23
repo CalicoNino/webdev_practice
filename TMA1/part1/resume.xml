@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="resume.xsl"?>
 
 <resume>
     <introduction>
-        <firstname>Karim</firstname>
-        <lastname>El Shenawy</lastname>
+        <name>Karim El Shenawy</name>
         <address>
-            <city>Milton</city>
-            <province>Ontario</province>
-            <postal>L9T0C9</postal>
+            <city>Milton, ON</city>
         </address>
         <contactno>14168244516</contactno>
         <email>elshenak@mcmaster.ca</email>
@@ -17,25 +13,27 @@
         <website>elninokr.com</website>
     </introduction>
     <work>
-        <postion>
+        <position>
             <title>Security Development Student</title>
             <company>Blackberry QNX</company>
             <date>Jan 20' - April 20'</date>
             <description>
-                    • Designing and integrating unit test cases in Python using Pytest framework for the core QNX Operating System
-                    • Implementing a Jenkins Pipeline to setup automated test environments
-                    • Assisting Developers in developing automation tools in C and resolving defects
+                <task1>Designing and integrating unit test cases in Python using Pytest framework for the core QNX Operating System</task1>
+                <task2>Implementing a Jenkins Pipeline to setup automated test environments</task2>
+                <task3>Assisting Developers in developing automation tools in C and resolving defects</task3>
             </description>
         </position>
-        <postion>
+        <position>
             <title>Student, Information System Cybersecurity</title>
             <company>Canadian Natural Resources Limited (CNRL)</company>
             <date>May 19' - Aug 19'</date>
             <description>
-                    • Developed a Phishing Tool that sends fraudulent email campaigns against 15 000 employees as a part of phishing awareness training. Automated results into CSV reports. Built using Python and PHP
-                    • Devised weekly Security Scans using Nessus Professional to ensure CIS compliance and identify vulnerabilities
-                    • Managed Forescout CounterACT and Palo Alto Panorama Firewall in order to monitor and control internet traffic and to protect production systems
-                    • Generated reports and tickets containing QIDs, CVEs, and other vulnerabilities for the mitigation teams
+                <task1>Developed a Phishing Tool that sends fraudulent email campaigns against 15 000 employees as a part
+                    of phishing awareness training. Automated results into CSV reports. Built using Python and PHP</task1>
+                <task2>Devised weekly Security Scans using Nessus Professional to ensure CIS compliance and identify
+                    vulnerabilities</task2>
+                <task3>Managed Forescout CounterACT and Palo Alto Panorama Firewall in order to monitor and control
+                    internet traffic and to protect production systems</task3>
             </description>
         </position>
     </work>
@@ -51,32 +49,32 @@
             <name>Stock Predictor</name>
             <language>Python</language>
             <content>
-                    • Developed a web application that displays and analyses current stock prices and currency exchange values using the Alpha Vantage API which generates current and historical data
-                    • Utilizes Long-short term memory (LSTM) Recurrent Neural Network to give predications of future stock prices
-                    • Built front-end using Django framework.
+                Developed a web application that displays and analyses current stock prices and currency exchange
+                values using the Alpha Vantage API which generates current and historical data. Utilizes Long-short term memory (LSTM) Recurrent Neural Network to give predications of future stock
+                prices. Built front-end using Django framework.
             </content>
         </project>
         <project>
             <name>Least Bit Encryption</name>
             <language>Python</language>
             <content>
-                Developed a Linux Command line tool application that encrypt and decrypts text in images using the Least Significant Bit algorithm, built using OpenCV.
+                Developed a Linux Command line tool application that encrypt and decrypts text in images using the Least
+                Significant Bit algorithm, built using OpenCV.
             </content>
         </project>
         <project>
             <name>Cipho</name>
             <language>Java</language>
             <content>
-                Developed a Windows application that encrypts and decrypts text and textfiles using various cryptographic algorithms and performs Statistical methods for decryption.
+                Developed a Windows application that encrypts and decrypts text and textfiles using various
+                cryptographic algorithms and performs Statistical methods for decryption.
             </content>
         </project>
     </projects>
     <education>
-        <school>
-            <name>McMaster University</name>
-            <degree>Bachelor of Engineering in Software Engineering w/ CO-OP</degree>
-            <date>Sept 16' - May 21'</date>
-            <minor>Mathematics Minor</minor>
-        </school>
+        <name>McMaster University</name>
+        <degree>Bachelor of Engineering in Software Engineering w/ CO-OP</degree>
+        <date>Sept 16' - May 21'</date>
+        <minor>Mathematics Minor</minor>
     </education>
 </resume>
