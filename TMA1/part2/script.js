@@ -6,30 +6,20 @@ function closeSideNav() {
   document.getElementById("mySidenav").style.width = "0px";
 }
 
-// function readJSONquiz(file) {
-//   const req = new XMLHttpRequest();
-//   req.open("GET", file, true)
-//   req.onreadystatechange = function() {
-//     if (this.readyState == 4) {
-//       const json = JSON.parse(this.responseText);
-//       console.log(json)
-//     }
-//   } 
-//   req.send();
-// }
+function readJSONquiz(file) {
+  var req = new XMLHttpRequest();
+  req.open("GET", file, false);
+  req.send(null);
+  var jsonfile = JSON.parse(req.responseText);
+  return jsonfile
+}
 
-// //usage:
-// readJSONquiz("quizzes\quiz1.json");
-
-fetch("quizzes/quiz1.json")
-
-// Functions
-function buildQuiz() {
+function buildQuiz(questions) {
   // variable to store the HTML output
   const output = [];
 
   // for each question...
-  myQuestions.forEach(
+  questions.forEach(
     (currentQuestion, questionNumber) => {
 
       // variable to store the list of possible answers
@@ -53,6 +43,7 @@ function buildQuiz() {
         `<div class="slide">
             <div class="question"> ${currentQuestion.question} </div>
             <div class="answers"> ${answers.join("")} </div>
+            <div class="correct"></div>
           </div>`
       );
     }
@@ -60,41 +51,6 @@ function buildQuiz() {
 
   // finally combine our output list into one string of HTML and put it on the page
   quizContainer.innerHTML = output.join('');
-}
-
-function showResults() {
-
-  // gather answer containers from our quiz
-  const answerContainers = quizContainer.querySelectorAll('.answers');
-
-  // keep track of user's answers
-  let numCorrect = 0;
-
-  // for each question...
-  myQuestions.forEach((currentQuestion, questionNumber) => {
-
-    // find selected answer
-    const answerContainer = answerContainers[questionNumber];
-    const selector = `input[name=question${questionNumber}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-    // if answer is correct
-    if (userAnswer === currentQuestion.correctAnswer) {
-      // add to the number of correct answers
-      numCorrect++;
-
-      // color the answers green
-      answerContainers[questionNumber].style.color = 'lightgreen';
-    }
-    // if answer is wrong or blank
-    else {
-      // color the answers red
-      answerContainers[questionNumber].style.color = 'red';
-    }
-  });
-
-  // show number of correct answers out of total
-  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 }
 
 function showSlide(n) {
@@ -123,42 +79,53 @@ function showPreviousSlide() {
   showSlide(currentSlide - 1);
 }
 
+function showResults(questions, quiz, results) {
+
+  // gather answer containers from our quiz
+  const answerContainers = quiz.querySelectorAll('.answers');
+  const correctContainers = quiz.querySelectorAll('.correct');
+
+  // keep track of user's answers
+  let numCorrect = 0;
+
+  // for each question...
+  questions.forEach((currentQuestion, questionNumber) => {
+
+    // find selected answer
+    const answerContainer = answerContainers[questionNumber];
+    const selector = `input[name=question${questionNumber}]:checked`;
+    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+    // if answer is correct
+    if (userAnswer === currentQuestion.correctAnswer) {
+      // add to the number of correct answers
+      numCorrect++;
+
+      // color the answers green
+      answerContainers[questionNumber].style.color = 'lightgreen';
+      correctContainers[questionNumber].innerHTML = `Correct!`
+    }
+    // if answer is wrong or blank
+    else {
+      // color the answers red
+      answerContainers[questionNumber].style.color = 'red';
+      correctContainers[questionNumber].innerHTML = `Correct answer is ${currentQuestion.correctAnswer}`
+    }
+  });
+
+  // show number of correct answers out of total
+  results.innerHTML = `${numCorrect} / ${questions.length}`;
+}
+
 // Variables
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
-const myQuestions = [{
-    question: "Who invented JavaScript?",
-    answers: {
-      a: "Douglas Crockford",
-      b: "Sheryl Sandberg",
-      c: "Brendan Eich"
-    },
-    correctAnswer: "c"
-  },
-  {
-    question: "Which one of these is a JavaScript package manager?",
-    answers: {
-      a: "Node.js",
-      b: "TypeScript",
-      c: "npm"
-    },
-    correctAnswer: "c"
-  },
-  {
-    question: "Which tool can you use to ensure code quality?",
-    answers: {
-      a: "Angular",
-      b: "jQuery",
-      c: "RequireJS",
-      d: "ESLint"
-    },
-    correctAnswer: "d"
-  }
-];
+
+test = readJSONquiz("quizzes/quiz1.json");
 
 // Kick things off
-buildQuiz();
+buildQuiz(test);
 
 // Pagination
 const previousButton = document.getElementById("previous");
@@ -170,6 +137,6 @@ let currentSlide = 0;
 showSlide(currentSlide);
 
 // Event listeners
-submitButton.addEventListener('click', showResults);
+submitButton.addEventListener('click', () => showResults(test, quizContainer, resultsContainer));
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
