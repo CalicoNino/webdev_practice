@@ -19,11 +19,17 @@
             <a href="javascript:void(0)" class="closebtn" onClick="closeSideNav()">&times;</a>
             <a href="index.html">Home</a>
             <a href="unit1.html">Unit 1</a>
-            <a href="quiz1.html"><h6>Quiz 1</h6></a>
+            <a href="quiz1.html">
+                <h6>Quiz 1</h6>
+            </a>
             <a href="unit2.html">Unit 2</a>
-            <a href="quiz2.html"><h6>Quiz 2</h6></a>
+            <a href="quiz2.html">
+                <h6>Quiz 2</h6>
+            </a>
             <a href="unit3.html">Unit 3</a>
-            <a href="quiz3.html"><h6>Quiz 3</h6></a>
+            <a href="quiz3.html">
+                <h6>Quiz 3</h6>
+            </a>
         </div>
         <button class="btn btn-warning text-light" onClick="openSideNav()">&#9776;</button>
         <h4 class="navigation-logo">
@@ -73,12 +79,20 @@
             </div>
             <div class="col-sm-8 text-left p-4">
                 <hr />
-                <h1>Unit 1: Introduction 1 – the Web, HTML5, and CSS</h1>
+                <h1>Unit 3: XML and Ajax</h1>
                 <hr />
                 <h3>Quiz 3</h3>
-                <div id="quiz"></div>
-                <button class="btn btn-info" id="submit">Get Results</button>
-                <div id="results"></div>
+                <p id="results_3">Score will be displayed here</p>
+
+                <div class="bg-warning rounded px-5 pb-3">
+                    <div class="quiz-container">
+                        <div id="quiz_3"></div>
+                    </div>
+                    <button class="btn btn-secondary mt-5" id="prev_3">Previous Question</button>
+                    <button class="btn btn-secondary mt-5" id="next_3">Next Question</button>
+                    <button class="btn btn-lg btn-info mt-4 float-right mb-5" id="submit_3">Submit Quiz</button>
+                </div>
+
             </div>
             <div height="100%" class="col-sm-2">
                 <hr />
@@ -130,6 +144,59 @@
     <footer class="bg-warning">
         <p>Copyright &copy; 2020 Rainbow Globe Web Tutorials.</p>
     </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+        ///Quiz 3
+        quizQuestions_3 = readJSONquiz("quizzes/quiz3.json");
+
+        function showSlide_3(n, submitButton, previousButton, nextButton, slides) {
+            slides[currentSlide_3].classList.remove('active-slide');
+            slides[n].classList.add('active-slide');
+            currentSlide_3 = n;
+            if (currentSlide_3 === 0) {
+                previousButton.style.display = 'none';
+            } else {
+                previousButton.style.display = 'inline-block';
+            }
+            if (currentSlide_3 === slides.length - 1) {
+                nextButton.style.display = 'none';
+                submitButton.style.display = 'inline-block';
+            } else {
+                nextButton.style.display = 'inline-block';
+                submitButton.style.display = 'none';
+            }
+        }
+
+        function showNextSlide_3(submitButton, previousButton, nextButton, slides) {
+            showSlide_3(currentSlide_3 + 1, submitButton, previousButton, nextButton, slides);
+        }
+
+        function showPreviousSlide_3(submitButton, previousButton, nextButton, slides) {
+            showSlide_3(currentSlide_3 - 1, submitButton, previousButton, nextButton, slides);
+        }
+
+        // Variables
+        const quiz_3 = document.getElementById('quiz_3');
+        const results_3 = document.getElementById('results_3');
+        const submitBtn_3 = document.getElementById('submit_3');
+
+        // Kick things off
+        buildQuiz(quizQuestions_3, quiz_3);
+
+        // Pagination
+        const prevBtn_3 = document.getElementById("prev_3");
+        const nextBtn_3 = document.getElementById("next_3");
+        const slides_3 = document.querySelectorAll(".slide");
+        let currentSlide_3 = 0;
+
+        // Show the first slide
+        showSlide_3(currentSlide_3, submitBtn_3, prevBtn_3, nextBtn_3, slides_3);
+
+        // Event listeners
+        submitBtn_3.addEventListener('click', () => showResults(quizQuestions_3, quiz_3, results_3));
+        prevBtn_3.addEventListener("click", () => showPreviousSlide_3(submitBtn_3, prevBtn_3, nextBtn_3, slides_3));
+        nextBtn_3.addEventListener("click", () => showNextSlide_3(submitBtn_3, prevBtn_3, nextBtn_3, slides_3));
+    </script>
 </body>
 
 </html>

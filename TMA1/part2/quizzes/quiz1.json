@@ -1,29 +1,235 @@
 [{
-    "question": "Who invented JavaScript?",
-    "answers": {
-      "a": "Douglas Crockford",
-      "b": "Sheryl Sandberg",
-      "c": "Brendan Eich"
+    "question": "What does CSS stand for?",
+    "choices": {
+      "a": "Creative Style Sheets",
+      "b": "Colorful Style Sheets",
+      "c": "Cascading Style Sheets",
+      "d": "Computer Style Sheets"
     },
-    "correctAnswer": "c"
+    "answer": "c"
   },
   {
-    "question": "Which one of these is a JavaScript package manager?",
-    "answers": {
-      "a": "Node.js",
-      "b": "TypeScript",
-      "c": "npm"
+    "question": "Which HTML attribute is used to define inline styles?",
+    "choices": {
+      "a": "font",
+      "b": "class",
+      "c": "styles",
+      "d": "style"
     },
-    "correctAnswer": "c"
+    "answer": "d"
   },
   {
-    "question": "Which tool can you use to ensure code quality?",
-    "answers": {
-      "a": "Angular",
-      "b": "jQuery",
-      "c": "RequireJS",
-      "d": "ESLint"
+    "question": "Which is the correct CSS syntax?",
+    "choices": {
+      "a": "body {color: black}",
+      "b": "{body;color:black}",
+      "c": "{body:color=black(body}",
+      "d": "body:color=black"
     },
-    "correctAnswer": "d"
+    "answer": "a"
+  },
+  {
+    "question": "How do you insert a comment in a CSS file?",
+    "choices": {
+      "a": "// this is a comment //",
+      "b": "/* this is a comment */",
+      "c": "‘ this is a comment",
+      "d": "/ this is a comment"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which property is used to change the background color?",
+    "choices": {
+      "a": "bgcolor:",
+      "b": "background-color:",
+      "c": "color"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "How do you add a background color for all h1 elements?",
+    "choices": {
+      "a": "all.h1 {background-color:#FFFFFF}",
+      "b": "h1.all {background-color:#FFFFFF}",
+      "c": "h1 {background-color:#FFFFFF}"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "How do you change the text color of an element?",
+    "choices": {
+      "a": "text-color=",
+      "b": "fgcolor:",
+      "c": "color:",
+      "d": "text-color"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Which CSS property controls the test size?",
+    "choices": {
+      "a": "font-size",
+      "b": "font-style",
+      "c": "text-styel",
+      "d": "text-size"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "How do you display hyperlinks without an underline?",
+    "choices": {
+      "a": "a {text-decoration:no underline}",
+      "b": "a {decoration:no underline}",
+      "c": "a {text-decoration:none}",
+      "d": "a {underline:none}"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "How do you make each word in a text start with a capital letter?",
+    "choices": {
+      "a": "text-transform:capitalize",
+      "b": "You can’t do that with CSS",
+      "c": "text-transform:uppercase"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "How do you change the font of an element?",
+    "choices": {
+      "a": "font-family:",
+      "b": "font=",
+      "c": "f:"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "How do you make the text bold?",
+    "choices": {
+      "a": "font:b",
+      "b": "font-weight:bold",
+      "c": "style:bold"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "How do you display a border like this: the top border = 10 pixels, the bottom border = 5 pixels, the left border = 20 pixels and the right border = 1pixel?",
+    "choices": {
+      "a": "border-width:10px 20px 5px 1px",
+      "b": "border-width:10px 1px 5px 20px",
+      "c": "border-width:5px 20px 10px 1px",
+      "d": "border-width:10px 5px 20px 1px"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "How do you change the left margin of an element?",
+    "choices": {
+      "a": "margin:",
+      "b": "indent:",
+      "c": "margin-left:",
+      "d": "text-indent:"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "To define the space between the element’s border and content, you use the padding property, but are you allowed to use negative values?",
+    "choices": {
+      "a": "Yes",
+      "b": "No"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "How do you make a list that lists its items with squares?",
+    "choices": {
+      "a": "list-type: square",
+      "b": "type: square",
+      "c": "type: 2",
+      "d": "list-style-type: square"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Is it possible to set up a browser so it refuse pages that does not have a content rating meta tag?",
+    "choices": {
+      "a": "Yes - many companies and parents actually do",
+      "b": "No",
+      "c": "Only with a cybersitter add on"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "When images are used as links they get a blue border.",
+    "choices": {
+      "a": "Always",
+      "b": "Never",
+      "c": "Unless border is set to zero"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "A 6 digit Hex color (#FF9966) defines values of Red, Blue and Green in which order ?",
+    "choices": {
+      "a": "#BBRRGG",
+      "b": "#BBGGRR",
+      "c": "#RRGGBB"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "When you count to 15 using hexadecimal numbers, the highest number is what ?",
+    "choices": {
+      "a": "F",
+      "b": "b",
+      "c": "15"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "The small and big tags are special in what way ?",
+    "choices": {
+      "a": "They can be repeated",
+      "b": "They work on anything",
+      "c": "They are for images only"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What does vlink mean ?",
+    "choices": {
+      "a": "visited link",
+      "b": "very good link",
+      "c": "active link"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Banners, buttons, dividers, clipart and other simple images usually work best as ?",
+    "choices": {
+      "a": "fonts",
+      "b": "gif",
+      "c": "jpg"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which format usually works best for photos ?",
+    "choices": {
+      "a": "JPG",
+      "b": "HTML",
+      "c": "GIF"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What does the GENERATOR meta tag tell ?",
+    "choices": {
+      "a": "What type of server your page is on",
+      "b": "Which program was used to produce the page",
+      "c": "Who designed the page"
+    },
+    "answer": "b"
   }
 ]

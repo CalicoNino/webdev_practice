@@ -82,15 +82,15 @@
                 <h1>Unit 1: Introduction 1 – the Web, HTML5, and CSS</h1>
                 <hr />
                 <h3>Quiz 1</h3>
-                <p id="results">Score will be displayed here</p>
+                <p id="results_1">Score will be displayed here</p>
 
                 <div class="bg-warning rounded px-5 pb-3">
                     <div class="quiz-container">
-                        <div id="quiz"></div>
+                        <div id="quiz_1"></div>
                     </div>
-                    <button class="btn btn-secondary mt-5" id="previous">Previous Question</button>
-                    <button class="btn btn-secondary mt-5" id="next">Next Question</button>
-                    <button class="btn btn-lg btn-info mt-4 float-right mb-5" id="submit">Submit Quiz</button>
+                    <button class="btn btn-secondary mt-5" id="prev_1">Previous Question</button>
+                    <button class="btn btn-secondary mt-5" id="next_1">Next Question</button>
+                    <button class="btn btn-lg btn-info mt-4 float-right mb-5" id="submit_1">Submit Quiz</button>
                 </div>
 
             </div>
@@ -145,6 +145,58 @@
         <p>Copyright &copy; 2020 Rainbow Globe Web Tutorials.</p>
     </footer>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+        ///Quiz 1
+        quizQuestions_1 = readJSONquiz("quizzes/quiz1.json");
+
+        function showSlide_1(n, submitButton, previousButton, nextButton, slides) {
+            slides[currentSlide_1].classList.remove('active-slide');
+            slides[n].classList.add('active-slide');
+            currentSlide_1 = n;
+            if (currentSlide_1 === 0) {
+                previousButton.style.display = 'none';
+            } else {
+                previousButton.style.display = 'inline-block';
+            }
+            if (currentSlide_1 === slides.length - 1) {
+                nextButton.style.display = 'none';
+                submitButton.style.display = 'inline-block';
+            } else {
+                nextButton.style.display = 'inline-block';
+                submitButton.style.display = 'none';
+            }
+        }
+
+        function showNextSlide_1(submitButton, previousButton, nextButton, slides) {
+            showSlide_1(currentSlide_1 + 1, submitButton, previousButton, nextButton, slides);
+        }
+
+        function showPreviousSlide_1(submitButton, previousButton, nextButton, slides) {
+            showSlide_1(currentSlide_1 - 1, submitButton, previousButton, nextButton, slides);
+        }
+
+        // Variables
+        const quiz_1 = document.getElementById('quiz_1');
+        const results_1 = document.getElementById('results_1');
+        const submitBtn_1 = document.getElementById('submit_1');
+
+        // Kick things off
+        buildQuiz(quizQuestions_1, quiz_1);
+
+        // Pagination
+        const prevBtn_1 = document.getElementById("prev_1");
+        const nextBtn_1 = document.getElementById("next_1");
+        const slides_1 = document.querySelectorAll(".slide");
+        let currentSlide_1 = 0;
+
+        // Show the first slide
+        showSlide_1(currentSlide_1, submitBtn_1, prevBtn_1, nextBtn_1, slides_1);
+
+        // Event listeners
+        submitBtn_1.addEventListener('click', () => showResults(quizQuestions_1, quiz_1, results_1));
+        prevBtn_1.addEventListener("click", () => showPreviousSlide_1(submitBtn_1, prevBtn_1, nextBtn_1, slides_1));
+        nextBtn_1.addEventListener("click", () => showNextSlide_1(submitBtn_1, prevBtn_1, nextBtn_1, slides_1));
+    </script>
 </body>
 
 </html>

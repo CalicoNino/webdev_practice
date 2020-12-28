@@ -1,29 +1,321 @@
 [{
-    "question": "Who invented JavaScript?",
-    "answers": {
-      "a": "Douglas Crockford",
-      "b": "Sheryl Sandberg",
-      "c": "Brendan Eich"
+    "question": "Ajax initial release date ?",
+    "choices": {
+      "a": "2001",
+      "b": "2003",
+      "c": "2005",
+      "d": "2007"
     },
-    "correctAnswer": "c"
+    "answer": "c"
   },
   {
-    "question": "Which one of these is a JavaScript package manager?",
-    "answers": {
-      "a": "Node.js",
-      "b": "TypeScript",
-      "c": "npm"
+    "question": "What is full form of Ajax?",
+    "choices": {
+      "a": "Asynchronous JavaScript And XML",
+      "b": "Asynchronous jQuery And XML",
+      "c": "Asynchronous JavaScript And XHTML",
+      "d": "Asynchronous jQuery And XHTML"
     },
-    "correctAnswer": "c"
+    "answer": "a"
   },
   {
-    "question": "Which tool can you use to ensure code quality?",
-    "answers": {
-      "a": "Angular",
-      "b": "jQuery",
-      "c": "RequireJS",
-      "d": "ESLint"
+    "question": "In AJAX you can ?",
+    "choices": {
+      "a": "Update a web page without reloading the page",
+      "b": "Receive data from a server - after the page has loaded",
+      "c": "Send data to a server - in the background",
+      "d": "All of the above"
     },
-    "correctAnswer": "d"
+    "answer": "d"
+  },
+  {
+    "question": "Implementing AJAX in our websites we can make our web pages ________ ?",
+    "choices": {
+      "a": "More Dynamic",
+      "b": "More interavtive and faster ",
+      "c": "More Responsive",
+      "d": "Easy to connect web page with server"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "What is the name of object used for AJAX request?",
+    "choices": {
+      "a": "HttpRequest",
+      "b": "xmlRequest",
+      "c": "XMLHTTPRequest",
+      "d": "Request"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Ajax is a…",
+    "choices": {
+      "a": "Programing Language",
+      "b": "OOPs concepts",
+      "c": "Technology ",
+      "d": "Options B and C"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Ajax based on ?",
+    "choices": {
+      "a": "JavaScript and XML",
+      "b": "VB Script and XML",
+      "c": "JavaScript and jQuery",
+      "d": "Javascript and HTTP requests "
+    },
+    "answer": "a"
+  },
+  {
+    "question": "AJAX allows web page to dynamically",
+    "choices": {
+      "a": "Change content",
+      "b": "Reload at times",
+      "c": "Control other pages",
+      "d": "Connect to other addresses"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "What server support AJAX?",
+    "choices": {
+      "a": "SMTP",
+      "b": "HTTP",
+      "c": "WWW",
+      "d": "All of the above"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which one of these technologies is NOT used in AJAX?",
+    "choices": {
+      "a": "CSS",
+      "b": "DOM",
+      "c": "DHTML",
+      "d": "Flash"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Which Web browser is the least optimized for Microsoft's version of AJAX?",
+    "choices": {
+      "a": "Firefox",
+      "b": "Opera",
+      "c": "Safari",
+      "d": "Internet Explorer"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "What makes Ajax unique?",
+    "choices": {
+      "a": "It works as a stand-alone Web-development tool.",
+      "b": "It works the same with all Web browsers.",
+      "c": "It makes data requests asynchronously.",
+      "d": "It uses C++ as its programming language."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "_____ Of the following technologies, which one provides the ability to dynamically interact with Web page layout?",
+    "choices": {
+      "a": "XML",
+      "b": "HTML",
+      "c": "JavaScript",
+      "d": "Document Object Model"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "The XMLHttpRequest object can be disabled via browser settings",
+    "choices": {
+      "a": "True",
+      "b": "False",
+      "c": "Error",
+      "d": "None of the above"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "AJAX made popular by______",
+    "choices": {
+      "a": "Microsoft",
+      "b": "Google",
+      "c": "IBM",
+      "d": "Sun Microsystem"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "What does XML stand for?",
+    "choices": {
+      "a": "eXtra Modern Link",
+      "b": "eXtensible Markup Language",
+      "c": "Example Markup Language",
+      "d": "X-Markup Language"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which statement is true?",
+    "choices": {
+      "a": "All the statements are true",
+      "b": "All XML elements must have a closing tag",
+      "c": "All XML elements must be lower case",
+      "d": "All XML documents must have a DTD"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Is it easier to process XML than HTML?",
+    "choices": {
+      "a": "Yes",
+      "b": "No",
+      "c": "Somtimes",
+      "d": "Cant say"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following programs support XML or XML applications?:",
+    "choices": {
+      "a": "Internet Explorer 5.5",
+      "b": "Netscape D.7",
+      "c": "RealPlayer.",
+      "d": "both A and B"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Kind of Parsers are",
+    "choices": {
+      "a": "well-formed",
+      "b": "well-documented",
+      "c": "non-validating and validating",
+      "d": "none of the above"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Well formed XML document means",
+    "choices": {
+      "a": "it contains a root element",
+      "b": "it contain an element",
+      "c": "it contains one or more elements",
+      "d": "must contain one or more elements and root element must contain all other elements"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "When processing an output XML, 'new line ' symbols",
+    "choices": {
+      "a": "are copied into output 'as is', i.e. 'CR + LF' for Windows, CR for Macintosh, LF for Unix.",
+      "b": "are converted to single LF symbol",
+      "c": "are converted to single CR symbol",
+      "d": "are discarded"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "Which of the following strings are a correct XML name?",
+    "choices": {
+      "a": "_myElement",
+      "b": "my Element",
+      "c": "#myElement",
+      "d": "None of the above"
+    },
+    "answer": "a"
+  },
+  {
+    "question": "Which of the following strings are a correct XML name?",
+    "choices": {
+      "a": "xmlExtension",
+      "b": "xslNewElement",
+      "c": "XMLElement#123",
+      "d": "All"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "What are the predefined attributes",
+    "choices": {
+      "a": "xml:lang",
+      "b": "xml:space",
+      "c": "both",
+      "d": "none."
+    },
+    "answer": "c"
+  },
+  {
+    "question": "Kind of Parsers are",
+    "choices": {
+      "a": "well-formed",
+      "b": "validating",
+      "c": "non-validating",
+      "d": "Both B & C"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "Valid XML document means (most appropriate)",
+    "choices": {
+      "a": "the document has root element",
+      "b": "the document contains atleast one or more root element",
+      "c": "the XML document has DTD associated with it & it complies with that DTD",
+      "d": "Each element must nest inside any enclosing element property"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "XML uses the features of",
+    "choices": {
+      "a": "HTML",
+      "b": "XHTML",
+      "c": "VML",
+      "d": "SGML"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "XML document can be viewed in",
+    "choices": {
+      "a": "IE C.0",
+      "b": "IE B.0",
+      "c": "IE 6.0",
+      "d": "IE X.0"
+    },
+    "answer": "c"
+  },
+  {
+    "question": "There is a way of describing XML data, how?",
+    "choices": {
+      "a": "XML uses a DTD to describe the data",
+      "b": "XML uses XSL to describe data",
+      "c": "XML uses a description node to describe data",
+      "d": "Both A and C"
+    },
+    "answer": "d"
+  },
+  {
+    "question": "What does DTD stand for?",
+    "choices": {
+      "a": "Direct Type Definition",
+      "b": "Document Type Definition",
+      "c": "Do The Dance",
+      "d": "Dynamic Type Definition"
+    },
+    "answer": "b"
+  },
+  {
+    "question": "DTD includes the specifications about the markup that can be used within the document, the specifications consists of all EXCEPT",
+    "choices": {
+      "a": "the browser name",
+      "b": "the size of element name",
+      "c": "entity declarations",
+      "d": "element declarations"
+    },
+    "answer": "a"
   }
 ]
