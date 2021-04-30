@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rainbow Globe Bookmarking</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="../shared/img/logo.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'
+        rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../shared/shared.css" type="text/css" />
+</head>
+
+<body>
+    <ul class="hmul">
+        <li class="hmli"><a href="../tma2.htm">Home</a></li>
+        <li class="hmli"><a class="active" href="../part1/index.html">Part 1</a></li>
+        <li class="hmli"><a href="../part2/index.html">Part 2</a></li>
+    </ul>
+    <nav class="navigation bg-warning">
+        <h4 class="navigation-logo">
+            Rainbow Globe
+            <a href="index.html" style="text-decoration:none;">
+                <img width="40px" height="40px" class="navbrand" src="../shared/img/logo.png" alt="logo" />
+            </a>
+            Bookmarking Service
+        </h4>
+    </nav>
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div height="100%" class="col-sm-2">
+                <hr />
+                <h6 class="mt-3">Our Top Ten Bookmarks (Highest to Lowest)</h6>
+                <hr />
+                <div id="TopTen"></div>
+
+            </div>
+            <div class="col-sm-8 text-left p-4">
+
+                <hr />
+                <h1>Welcome New or Returning Users!
+                    <img width="60px" height="60px" src="../shared/img/logo.png" alt="logo_title" />
+                </h1>
+                <hr />
+            </div>
+            <div height="100%" class="col-sm-2">
+                <hr />
+                <h6 class="mt-3">Log In Here</h6>
+                <hr />
+                <div id="AuthSelection" class="card text-light bg-dark text-left pt-3 px-3">
+                    <input id="SelectLOGIN" class="btn btn-warning mb-3" type="submit" name="submit" value="LOGIN">
+                    <input id="SelectSIGNUP" class="btn btn-secondary mb-3" type="submit" name="submit" value="SIGN UP">
+                </div>
+                <div id="AuthContainer" class="text-light text-center bg-dark text-left py-3 px-3 rounded ">
+                    <form>
+                        <form>
+                            <input class="inputStyle" type="text" name="username" placeholder="Username">
+                        </form>
+                        <form>
+                            <input class="inputStyle" type="password" name="password" placeholder="Password">
+                        </form>
+                    </form>
+                    <hr />
+                    <p id="error"></p>
+                    <hr />
+                    <input id="loginBtn" class="btn btn-warning" type="submit" name="submit" value="LOGIN">
+                    <input id="signupBtn" class="btn btn-warning" type="submit" name="altButton" value="SIGN UP">
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <footer class="bg-warning">
+        <p>Copyright &copy; 2021 Rainbow Globe Bookmarking Service.</p>
+    </footer>
+
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./login/login.js"></script>
+</body>
+
+</html>

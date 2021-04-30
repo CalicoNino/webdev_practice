@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu>
+
+<unit title="Unit 3: XML &amp; Ajax">
+	<overview>
+		<para>
+			This unit will teach you the basics of XML and Ajax. These can help organize your documents and data as well as provide ways to request the server for information.
+		</para>
+	</overview>
+	<chapter title="XML">
+		<overview>
+			<para>
+				XML stands for Extensible Markup Language. It has become a standard format for data exchange over the internet. This markup language can describe any type of data that humans can understand and computers to easily process. Below is an example of XML describing a baseball player (Deital p.512).
+				<image src="img/fig15-1_p512.png">
+					Simple XML Example
+				</image>
+				<para>
+					The structure of XML is similar to HTML5 elements and can even have attributes. The 'tags' in this case are user defined and therefore there are endless possibilities in representing data.
+				</para>
+			</para>
+		</overview>
+		<section title="XML Basics">
+			<para>
+				There are a few basic definitions and structures in XML that are handy to know!
+			</para>
+			<definition term="Data/Text Content">
+				As seen in the above example, John is considered to be the data of the document
+			</definition>
+			<definition term="Element">
+				In the above example, firstName is an element. This will link the element to its contained data. Note that an XML file should always contain one root element (ie. player) and element names should not contain any whitespace. It is important to include a root element, match each start tag with an end tag, and to keep casing uniform since XML is case sensitive
+			</definition>
+			<definition term="Nested Elements">
+				You can nest elements within each other to create a more detailed and complex XML structure. You should declare your XML version similar to how you declare the information for an HTML5 file. To do this you should follow what's written at line 1 of the example above.
+			</definition>
+			<definition term="Type">
+				You can add a type attribute to your XML elements which can help differentiate between, for example, contact elements where one is of type sender and one is of type receiver.
+			</definition>
+			<definition term="Namespace">
+				Often times there may be elements that you want to be represented with the same name. Even though XML allows this, it can be hard in terms of readability and maintainability. You can use namespaces to provide some organization.
+			</definition>
+			<para>
+				You should always ensure your XML is well formed. There are many online resources such as <a href="https://www.w3schools.com/xml/xml_validator.asp">W3Schools</a> to validate your XML.
+			</para>
+			<para>
+				Most XML files can be viewed in a browser without any styling but will usually have a warning at the top to state no style is associated with it. Although you can still view the XML it's not in a nice format that the browser can display. You can add a XSL sheet linked to your XML (similar to the idea of a CSS file to an HTML5 file). <a class="def">XSL</a> stands for Extensible Stylesheet Language and will be explained later.
+			</para>
+		</section>
+		<section title="Document Type Definition (DTD)">
+			<definition term="DTD">
+				This stands for Docuement type definition. It describes the structure of your XML file so that an XML parser can verify if your XML document is valid. This will help when it comes to formatting your XML in a valid and uniform way. XML documents that do not follow the linked DTD document will display an error. Although you have a well structured document, you may not have a valid document. However, DTDs have been considered not flexible enough and do not specify data types. This is where XML schemas come in.
+			</definition>
+		</section>
+		<section title="XML Schema">
+			<definition term="XSD">
+				stands for XML Schema Document. This also describes the elements and content of your XML document with the added information of data types. XSD are more widely used to validate XML Documents.
+			</definition>
+		</section>
+		<section title="Styling XML with XSL">
+			<para>
+				As mentioned above, XSL files specifies how a browser should render the XML file. This will help us control what elements are headings, paragraphs, or lists! The line below should be added into your XML file to link your .xsl file.
+			</para>
+			<code>&lt;?xml-stylesheet href="resume.xsl" type="text/xsl"?&gt;</code>
+			<para>
+				The following definitions introduce some basic knowledge with XSL:
+			</para>
+			<definition term="Template">
+				Templates are used in XSL files to match and specify what nodes to process. The syntax is as follows
+			</definition>
+			<code>&lt;xsl:template match = "element"&gt;</code>
+			<definition term="Root Element">
+				match ="/"
+			</definition>
+			<definition term="Specific Element">
+				match ="nameOfElement"
+			</definition>
+			<definition term="Any Element">
+				match ="*"
+			</definition>
+			<definition term="Current Element">
+				match =".", note this should work best within a nested match
+			</definition>
+			<para>
+				The content of an XSL file is very similar to an HTML5 but its content are the XML values. The following is an example of how you can set up a XSL to style your XML documents (Deital p.540).
+			</para>
+			<image src="img/fig15-19_p540.png">
+				XSL Styling
+			</image>
+		</section>
+	</chapter>
+	<chapter title="AJAX">
+		<overview>
+			<para>
+				Ajax stands for Asynchronous Javascript and XML. This makes client side scripting more responsive to your web system. It send aynchronous request to the server and will not be blocked, therefore making your webpages more responsive.
+			</para>
+			<para>
+				Traditionally, a web system has a client side and server side. Ajax is considered to be a middle tier between the the client and server. Ajax can create a XMLHttpRequest to manage a request and retrieve the data from the server. While this request has been sent, the user is able to move on. A good aspect of using Ajax is that it does not require you to reload a page every time a request is sent. It uses a function known as the <a class="def">callback function</a> that uses <a class="def">partial page update</a> which will update the specific element rather than the whole page.
+			</para>
+			<para>
+				The following image (Deital p.574) gives some insight of how Ajax works.
+			</para>
+			<image src="img/fig16-2_p574.png">
+				Intro to AJAX
+			</image>
+		</overview>
+		<section title="Common AJAX Definitions">
+			<para>
+				Ajax is commonly used through XMLHttpRequests, which was mentioned earlier to be request manager objects. It can detect state changes such as onreadystatechange to ensure that the data requests has been fully sent from the server. The following are some other common XMLHttpRequest methods
+			</para>
+			<definition term="send()">
+				This can sent get, post, etc. to the server and specify the data to retreive
+			</definition>
+			<definition term="responseXML">
+				Retrieves the xml file from the server
+			</definition>
+			<definition term="abort()">
+				Stops the current request
+			</definition>
+			<definition term="status">
+				A status = 200 means a sucessful request was done. 500 means an error has occured
+			</definition>
+			<para>
+				This is just a basic run down of Ajax and as always I reccommend to go online to find more detailed things you can do with Ajax. W3Schools does a good job <a href="https://www.w3schools.com/xml/ajax_intro.asp">here</a>!
+			</para>
+			<conclusion>
+				This concludes the tutorial on XML and Ajax. Please try out the quiz to test out your knowledge on this unit.
+			</conclusion>
+		</section>
+	</chapter>
+	<quiz title="Unit 3 Quiz">
+		<question txt="What does XML stand for?">
+			<ans correct="0">External Markup Language</ans>
+			<ans correct="0">External Management Lanuage</ans>
+			<ans correct="1">Extensible Markup Language</ans>
+			<ans correct="0">Extensible Management Language</ans>
+		</question>
+		<question txt="What typeås of elements can I use in an XML file?">
+			<ans correct="0">The same as those in HTML5</ans>
+			<ans correct="0">There is an online database of XML elements to use</ans>
+			<ans correct="0">XML documents do not use elements</ans>
+			<ans correct="1">Any elements can be used since they are user defined</ans>
+		</question>
+		<question txt="What is the most common way to validate XML documents?">
+			<ans correct="1">XSD</ans>
+			<ans correct="0">XSL</ans>
+			<ans correct="0">DTD</ans>
+			<ans correct="0">DTL</ans>
+		</question>
+		<question txt="How does one stylize an XML document?">
+			<ans correct="0">Inline the XML sheet</ans>
+			<ans correct="1">With a XSL document</ans>
+			<ans correct="0">With a CSS document</ans>
+			<ans correct="0">With a HTML5 document</ans>
+		</question>
+		<question txt="What does AJAX stand for?">
+			<ans correct="0">Abstract Javascript and XML</ans>
+			<ans correct="1">Asynchronous Javascript and XML</ans>
+			<ans correct="0">Adaptable Javascript and XML</ans>
+			<ans correct="0">Agile Javascript and XML</ans>
+		</question>
+		<question txt="What is a favourable aspect of using Ajax?">
+			<ans correct="0">Ajax stylizes your web page with XML and Javascript</ans>
+			<ans correct="0">Ajax reloads your webpage quicker than without it</ans>
+			<ans correct="0">Ajax is not yet prefered or widely accepted</ans>
+			<ans correct="1">Ajax does not relaod a web page after a request</ans>
+		</question>
+		<question txt="What status code represents a successful request?">
+			<ans correct="0">0</ans>
+			<ans correct="0">100</ans>
+			<ans correct="1">200</ans>
+			<ans correct="0">500</ans>
+		</question>
+	</quiz>
+</unit>
+</edu>

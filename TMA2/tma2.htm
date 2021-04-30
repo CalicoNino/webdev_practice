@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TMA2 Main Page</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./shared/shared.css" type="text/css"/>
+</head>
+
+<body>
+    <div>
+      <ul class="hmul">
+        <li class="hmli"><a class="active" href="./tma2.htm">Home</a></li>
+        <li class="hmli"><a href="./part1/index.html">Part 1</a></li>
+        <li class="hmli"><a href="./part2/index.html">Part 2</a></li>
+      </ul>
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div height="100%" class="col-sm-2">
+          </div>
+
+          <div class="col-sm-8 text-left"> 
+            <hr />
+            <h1>TMA2</h1>
+            <hr/>
+            <h4>Advanced Technologies for Web-based Systems | Computer Science 466</h4>
+            <h5>By Karim El Shenawy | 3471139 </h5>
+            <h6>Assignment Created: February 26th 2021 </h6>
+            <h6>Assignment Completed: April 19th 2021 </h6>
+            <h6>Estimated Hours Spent: 75</h6>
+            <hr />
+            <p>To Run, simply go the the website link <a class="bold" href="http://elninokr.com/TMA2/tma2.htm">elninokr.com/TMA2/tma2.htm</a></p>
+            <p>You can also run the <a class="bold" href="tma2.htm">tma2.htm</a> in your local browser after downloading the files. 
+              You will require some local server such as XAMPP. Also modify the <a class="bold" href="./shared/connection.php">connection.php</a> file in the shared directory to match the your local 
+              host database setup. Then using the "setupDatabase.sql" file to configure and setup your local database.</p>
+            <hr />
+            <p>This Assignment is divided in 2 parts that can be accessed through the global top navbar.</p>
+            <h4>Please Enjoy!</h4>
+            <hr />
+            Here are some documentation and comments on each projects:
+
+            <h4>Part 1</h4>
+            <ul>
+              <li><span class="font-weight-bold">Description:</span> This section consists of the Online Bookmarking portion of the Website. The User can either Login or 
+                SignUp then the user can add, edit and delete valid urls. In addition, they can view the top liste bookmarks on all pages.</li>  
+              <li><span class="font-weight-bold">Analysis:</span> I used a one to many relationship between the users and the bookmarks in order to map out the database 
+                where the username is the foreign key for the Bokkmark Entity. Used PHP for login and logi validity. Also, I used jquery to setup functions and read from HTML. 
+                The reason behind this and not using vanilla javascript is because I'm a native Javascript/ReactJS user so I wanted to test out jquery as it is heavily used around the world. 
+                Also I attempted to use PHP session to control active login by the user, however it kept giving me errors so I based my solution to matching cookies saved when user logs in and removed when
+              the user logged out. This solution was implemented by W3Schools (which I referenced in the code). I used PHP to cmmunicate with the database and call in queries which resulted in being very easy and efficient.</li>  
+              <li><span class="font-weight-bold">Documentation:</span> I added comments to the code where comments seemed to be needed. Most documentation is referencing to within the code itself. </li>  
+              <li><span class="font-weight-bold">User Guide:</span> To begin, follow the following steps:
+                <ul>
+                  <li>Click on Part 1 on the global navbar.</li>
+                  <li>You can always view the Top Ten Bookmarked Pages.</li>
+                  <li>SignUp by clicking sign up and inputing a username and password.</li>
+                  <li>You will be automaitcally logged in. However, you can alternatively login if a user account already created.</li>
+                  <li>User can then add a bookmark and if an error occurs, the user will be displayed a message.</li>
+                  <li>After a bookmarkis added, the user can edit or delete that bookmark.</li>
+                  <li>When done, the user can log out or simply exit the screen. The user will be automaically logged in at their next visit since they haven't logged out.</li>
+                </ul>  
+              </li>
+            </ul>
+
+            <h4>Part 2</h4>
+            <ul>
+              <li><span class="font-weight-bold">Description:</span> This section consists of the Online School portion of the Website. The user can log in and load a class and start it.</li>  
+              <li><span class="font-weight-bold">Analysis:</span> I used several relationships (that are outlined in the diagram below). My XML file was based off the book and my previous assignement information. 
+                I decided to divide it into Units, Chapters and Sections to match the Book's Outline. This part was difficult to create but I managed. these small details always seem the hardest. I implemented a XML parser 
+                in jquery based off of my XML. I also created a upload php and reader php file to communicate with the database. User can select a course and either type up the path or choose it from their folders.
+              </li>  
+              <li><span class="font-weight-bold">Documentation:</span> I added comments to the code where comments seemed to be needed. Most documentation is referencing to within the code itself. </li>  
+              <li><span class="font-weight-bold">User Guide:</span>  To begin, follow the following steps:
+                <ul>
+                  <li>Click on Part 2 on the global navbar.</li>
+                  <li>You can always view some cool facts on both sides of the page.</li>
+                  <li>SignUp by clicking sign up and inputing a username and password.</li>
+                  <li>You will be automaitcally logged in. However, you can alternatively login if a user account already created.</li>
+                  <li>User can then add a class that is in then XML format. For this part, there is a ready xml files in "./part2/units/unit1.xml", "./part2/units/unit2.xml" and "./part2/units/unit3.xml". The user can add this to the file pathname or find it using the
+                    file explorer option. Both with report back an error if the user selected a file that is not in the corrwect format.</li>
+                  <li>User will have all the units dsiplayed. The user can select and attempt to read and do a quiz.</li>
+                  <li>There is a back button for the user to use and a grade button for the user to grade their quiz.</li>
+                  <li>When done, the user can log out or simply exit the screen. The user will be automaically logged in at their next visit since they haven't logged out.</li>
+                </ul>  
+              </li>
+            </ul>
+
+            <hr/>
+            <h4>Database Entity Relationship Diagram</h4>
+            <br>
+            <img src="./shared/erd.png" alt="ERB">
+            <br>
+            <br>
+            <br>
+
+          </div>
+          <div class="col-sm-2">
+          </div>
+        </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu>
+
+<unit title="Unit 1: HTML5 &amp; CSS3">
+	<overview>
+		<para>
+			For Unit 1, you will be introduced to the main concepts of the web and the basic structure to writing in HTML5 &amp; CSS3. The following information has been sourced from Athabasca University COMP 466 and Internet and World Wide Web How To Program, 5th Edition (Deitel, Harvey, Abbey Deitel).
+		</para>
+		<para>
+			Following the completion of this tutorial, a quiz to test your knowledge will be available.
+		</para>
+	</overview>
+	<chapter title="The Web">
+		<overview>
+			<para>
+				When you surf the internet what types of things do you think occurs in the background? How does it know what to display? How does it know when you click or input items? All of these 'things' are a result of a web system in which a web server and web client communicate with each other. Every single click and action can trigger a request to a web server that will return the desired result. There are so many components that go into a well designed web system and within this chapter you will be exposed to many of these fundamental concepts. 
+			</para>
+		</overview>
+		<section title="Introduction">
+			<para>
+				Before we dive into specific UI components and writing your first scripts, we will need to learn about some terms that will be mentioned throughout the unit.
+			</para>
+			<definition term="Web Client">
+				A web client sends its requests to the server and is usally known as the 'web browser'. As a user of a website, you are essential the web client. Some of these requests can include mouse-clicks, text input, and button-clicks.
+			</definition>
+			<definition term="Web Server">
+				A web server processes the client's request and responds by either modifying and/or retrieving various forms of data. This can include requests to a database, server files, network files, and many others.
+			</definition>
+			<definition term="HTTP">
+				HTTP stands for HyperText Transfer Program, which is essentially what allows for the transfer of data between clients and servers. This all occurs over the internet/ intranet.
+			</definition>
+		</section>
+		<section title="HyperText Transfer Program (HTTP)">
+			<para>
+				As defined in the previous section, HTTP enables the transfer and access of data. When you open up your browser and navigate to any website, you are most likely accessing HTML5 files, which creates the foundation of a website, using URIs and URLs. What exactly does this all mean? First, lets take a look the definition of these terms.
+			</para>
+			<definition term="HTML5">
+				HTML5 stands for HyperText Markup Language (v5 being the current major version). This language describes the content and framework of a webpage. Such content includes the text, images, formatting, and even some business logic. Using HTML5, you will be able to create .html or .htm files that will be the basics to any website.
+			</definition>
+			<definition term="URI">
+				URI stands for Uniform Resource Identifiers. In a general sense, it is a way to identify resources (i.e. web pages)on the internet.
+			</definition>
+			<definition term="URL">
+				URL stands for Uniform Resource Lookup and is actually a subset of URIs that not only identifies a resource but it also provides a method to locate the resource.
+			</definition>
+			<para>
+				Now that we have learned the terms, we need to understand the order of events that occur when accessing a web page.
+			</para>
+			<para>
+				In order for a web page to be displayed, there must be some commication performed between the client and the server. First, the client would request the resource (i.e. the user would type in a URL into a web browser) using HTTP. This will send a request to the address of webpage. The server would then receive this request and lookup the resource that was requested. After retrieving the resource, the server will respond by displaying resource and its contents. The following images, taken from Deital p.607-608, explains this process quite nicely.
+			</para>
+			<image src="img/fig17-1_p607-608.png">
+				Figure 1. Web Server and Client Communication
+			</image>
+			<para>
+				As mentioned, the client can send many requests to the server. There are various request types such as GET and POST, to name a few.
+			</para>
+			<definition term="GET">
+				GET will asks the server to retrieve the data such as images or files. You can think of it as almost a 'read-only' request that will not change any data stored on the server.
+			</definition>
+			<definition term="POST">
+				When sending a POST request, the client's intent is to  be able to modify the data contained in the server. This can include adding, deleting, and editing the server's data. This usually involves data being sent from the client and processed by the server to obtain the desired result.
+			</definition>
+			<para>
+				With these flows of communication, a web system can become quite complex. In order to keep a web system maintainable and easy for other developers to understand, a multi-tier design architecture is often used. The most common multi-tier design is comprised of three distinct layers.
+			</para>
+			<definition term="Database Layer (Bottom Tier)">
+				Starting at the foundation of a web architecure is often a database level. This layer would typically hold all of the data a system contains to access, edit, and process. The client should never have direct access to this layer.
+			</definition>
+			<definition term="Business Logic Layer (Middle Tier)">
+				The middle tier of this design can be thought of as the middle man that processes the data in the bottom tier and hands it over to the top layer to display to the client. In this layer, algorithms, accessing data, and handling requests are performed. It is also very common for this layer to be split into two layers. One being a Database Access Layer and all other business logic.
+			</definition>
+			<definition term="User Interface Layer (Top Tier)">
+				At the top, is the UI layer that will present the data to the user. The most basic UI layer would simply be human readable but in order to make your web page stand out, a lot of UI elements and tricks are needed to creatively and effectively present the data.
+			</definition>
+			<para>
+				Now that we have learned the foundations of what occurs in a web system, we can look deeper into how to develop HTML5 files and design a attractive UI using CSS3.
+			</para>
+		</section>
+	</chapter>
+	<chapter title="HTML5">
+		<overview>
+			<para>
+				Up until this point, we have learned about some of the background events that occur in a web system. But all of this doesn't really matter if there is nothing for a user to see and interact with. In order to display a website to a user, HTML5 is used! If you have previous experience with programming languages such as C, C++, C#, and Java, you might think HTML should be a similar enough. Wrong! HTML5 is a markup language that specifies both the structure as well as the content of a web page. The syntax is quite unique compared to common object-orientated or scripting languages.
+			</para>
+		</overview>
+		<section title="Basics of HTML5">
+			<para>
+				The most basic outline of an HTML5 file will be as follows (Deital p.39).
+			</para>		
+			<image src="img/fig2-1_p39.png">HTML5 Outline</image>
+			<para>
+				This is the skeleton that makes up any and all HTML5 files you view in a web browser today. We will quickly break down what the above file is composed of.
+			</para>
+			<bulletList>
+				<listItem>
+					Line 1: This is the Document type, web browsers require this line in order for it to know what type of file it will be processing (compatibility etc.)
+				</listItem>
+				<listItem>
+					Lines 2-3: These lines are comments and will be ignored by the browser
+				</listItem>
+				<listItem>
+					Lines 6-9: This tag element is known as the Head. It contains the information of the HTML5 for the browser to properly know what to do with the file (encodings, title, style CSS, etc.)
+				</listItem>
+				<listItem>
+					Lines 11-13: This is the Body, where all of a web page's content is written.
+				</listItem>
+			</bulletList>
+			<para>
+				To break down the terminology of the structures in an HTML5 file further, the following list will provide a basic syntax:
+			</para>
+			<definition term="Element">
+				As seen above, the head and body elements are required in every HTML5. An element is usually in the form &lt;tagname&gt;content&lt;/tagname&gt; (paragraphs, list items, headers, etc.). They can also be written without an end tag when no content is required and will be in the form &lt;tagname/&gt;
+			</definition>
+			<definition term="Nested Elements">
+				These are known as elements that fall within another element (ie. the title element at line 8)
+			</definition>
+			<definition term="Attributes">
+				Within the starting tag of an element, you can specify properties of the element using attributes. These follow the form attributeName="attributeValue". Common attributes include the class (grouping), id (unique identifier), and src (for images and other media).
+			</definition>
+		</section>
+		<!-- ////////////////////// Section 2 ////////////////////// -->
+		<section title="Common Elements">
+			<para>
+				Like common objects and variable types in Java, C#, and python, HTML5 has many common elements that can be used in to build a web page. These are a few of the most common elements in HTML5
+			</para>
+			<definition term="Headings">
+				Have you noticed the various "titles" on this webpage and their varying sizes? Well that is the result of using the heading element, &lt;h1&gt;Title&lt;/h1&gt;Headings h1 (biggest) - h6 (smallest) are available to use. These act as titles that can help organize and display your web page<br/>
+			</definition>
+			<example>
+				<h3>Example h3 Title</h3>
+			</example>
+			<definition term="Paragraphs">
+				Just as the name suggests this element can create a paragraph of text &lt;p&gt;My paragraph&lt;/p&gt;
+			</definition>
+			<example>
+				<p>Example paragraph</p>
+			</example>
+			<definition term="Links">
+				You can make most elements act as clickable links using &lt;a href="http://google.ca"&gt;Google!&lt;/a&gt;.
+			</definition>
+			<example>
+				<a href="http://google.ca">Google!</a>
+			</example>
+			<definition term="Images">
+				Images, like the figures you have seen on this webpage, are shown using &lt;img src="pathToMyImg"&gt;. Note these do not need an end tag &lt;/img&gt; or a /&gt;
+			</definition>
+			<definition term="Lists">
+				You can make bulleted/unordered lists &lt;ul&gt; or numbered/ordered lists &lt;ol&gt;. Within these you create nested list item elements &lt;li&gt;
+			</definition>
+			<example>
+				<ol><li>list item 1</li><li>list item 2</li></ol>
+			</example>
+			<definition term="Table">
+				Tables are a bit more complex than the above elements. The general outline is as follows. You can look into addings headers and footers as they are quite straighforward.<br/>
+					&lt;table&gt;<br/>
+					&lt;tr&gt;Insert a row&lt;/tr&gt;<br/>
+						&lt;th&gt;Column1&lt;/th&gt;<br/>
+						&lt;th&gt;Column2&lt;/th&gt;<br/>
+					&lt;/tr&gt;<br/>
+					&lt;/table&gt;
+			</definition>
+			<example>
+					<table border="1px solid black">
+						<tr><th>Banana</th><th>Yellow</th></tr>
+						<tr><th>Apple</th><th>Red</th></tr>
+					</table>
+			</example>
+			<definition term="Form">
+				This element helps to collect information from the user. This can also bundle together radio buttons and other elements together which requires user input. &lt;form&gt;Contains a lot of elements&lt;/form&gt;
+			</definition>
+			<definition term="Input">
+				As mentioned above these represent radio buttons, check boxes, text boxes, datetime, etc. &lt;input type="radio" name="grouping"&gt; Text
+			</definition>
+			<example>
+				<input type="radio" name="test"> Select Me!<br/></input>
+			</example>
+			<para>
+				The best way in my opinion to learning what you can do is to google and research! There are so many elements and neat tricks you can do with them in order to make your webpage truely interactive and better. Just remember in order for you to follow good coding rules you can should always validate your HTML5 file. This can be done <a href="https://validator.w3.org/">here</a>
+			</para>
+		</section>
+	</chapter>
+	<chapter title="CSS3">
+		<overview>
+			<para>
+				Now that we know how to create the contents of a webpage, how do we make it look nicer than plain black and white text with no formatting? This is done using CSS, Cascading Style Sheets.
+			</para>
+			<para>
+				Although you can add formatting to an HTML5 directly with attributes, this can result in messy code. It also makes it difficult to make any uniform change to the same element for example (unnecessary duplicaate formatting). For example, you want all headers to be blue but done want to add that color attribute to every single element in all of your files. CSS takes care of all formatting in a seperate file where you can easily control all of the same elements' styling.
+			</para>
+			<para>
+				In order to link a style sheet to your HTML5 file, you need to add the following line within the head element. &lt;link rel="stylesheet" type="text/css" href="filePath.css"&gt;. Now you may begin creating your .css file that will help format your web page
+			</para>
+		</overview>
+		<section title="General GuideLines">
+			<para>
+				Similar to how there is so many attributes that you can do, it would be impossible for us to cover everything. However there is a general format that can be followed for the CSS styling. First we typically start with the tagname, class name, or id name in which we wish to stylize.
+			</para>
+			<bulletList>
+				<listItem>
+					Tags can simply be written as they are (ie. h2 {})
+				</listItem>
+				<listItem>
+					Classes need to being with a '.' (ie. .myClass {})
+				</listItem>
+				<listItem>
+					IDs need to begin with '#' (ie. #uniqueTitle {})
+				</listItem>
+			</bulletList>
+			<para>
+				You can also add multiple elements by comma seperating them (ie. h1, h2, #firstTitle {}) as well as follow a nested element such as a paragraph within the class "section"
+			</para>
+			<example>
+				.section p<br/>{<br/>}
+			</example>
+			<para>
+				Within the curly brackets is where you will add the attributes and their values. These follow the form attributeName: attributeValue;
+			</para>
+		</section>
+		<section title="Common Attributes">
+			<para>
+				The following are a few common attributes that you can do with CSS
+			</para>
+			<definition term="Color">
+				You can set the value of the color attribute as a common color or an rgb hex value. The common colors can be written in plain english (ie. grey, red, green) and a list can be found <a href="https://www.w3schools.com/colors/colors_names.asp">here</a>. If you wish to use your own colours you may use the hex value with # appended in the beginning (ie. color: #00BFFF;)
+			</definition>
+			<definition term="Width/Height">
+				The size of an element can be modified. You can use various ways such as specifying the exact pixel (ie. 50px), relative to the font size (ie. 3em), percentage (ie. 50%), <a href="https://www.w3schools.com/cssref/css_units.asp">etc.</a>
+			</definition>
+			<definition term="Margins/Padding">
+				You can change the margins of the element or the padding in a similar way as the width and height
+			</definition>
+			<definition term="Alignment">
+				You can center, left, right, top, or bottom align. It is easiest in my opinion to text-align the containing element if you wish to, for example, center align the nested element.
+			</definition>
+			<definition term="Border">
+				You can change a border's size and colour or even get rid of one (setting it to 0)
+			</definition>
+			<definition term="Display">
+				There are a few display attribute values you can use such as inline, inline-block, block, list-item, <a href="https://www.w3schools.com/cssref/pr_class_display.asp">etc.</a>
+			</definition>
+			<para>
+				The list goes on and on. Again, the best way in my opinion is to research what you want to do and how it can be doen with CSS!
+			</para>
+			<conclusion>
+			This concludes the tutorial on HTML5 and CSS. Please try out the quiz to test out your knowledge on this unit.
+		</conclusion>
+		</section>
+	</chapter>
+	<quiz title="Unit 1 Quiz">
+		<question txt="What does HTML5 stand for?">
+			<ans correct="0">HTTP Text Markup Language</ans>
+			<ans correct="1">Hypertext Markup Language</ans>
+			<ans correct="0">HTTP Text Markup Lookup</ans>
+			<ans correct="0">Hypertext Markup Lookup</ans>
+		</question>
+		<question txt="What is true about the Web Server">
+			<ans correct="0">It sends requests to retrieve information files</ans>
+			<ans correct="0">It is a physical room of people who receive data and finds it</ans>
+			<ans correct="0">It is not a part of web systems</ans>
+			<ans correct="1">It receives requests for information and data</ans>
+		</question>
+		<question txt="What are the three tiers in order from bottom tier to top tier in a Web System?">
+			<ans correct="0">Database, GUI Layer, Business layer</ans>
+			<ans correct="0">GUI layer, Businesss Layer, Database</ans>
+			<ans correct="0">Business Layer, Database, GUI Layer</ans>
+			<ans correct="1">None of the above</ans>
+		</question>
+		<question txt="CSS stands for?">
+			<ans correct="0">Cascading Sheet System</ans>
+			<ans correct="0">Common Sheet Style</ans>
+			<ans correct="1">Cascading Style Sheet</ans>
+			<ans correct="0">Creative Styling Size</ans>
+		</question>
+		<question txt="What does the head element used for?">
+			<ans correct="0">The content of the web page (ie. images, text, headings)</ans>
+			<ans correct="1">The title, encoding, and css linking</ans>
+			<ans correct="0">All headings of the document go here</ans>
+			<ans correct="0">Specifies what elements have been used in the document</ans>
+		</question>
+		<question txt="Are URIs the same as URLs? Why?">
+			<ans correct="0">No, they are synonyms to each other</ans>
+			<ans correct="0">Yes, URIs are a subset of URLs</ans>
+			<ans correct="1">Yes, URLs are a subset of URIs</ans>
+			<ans correct="0">Yes, URIs are integer based and URLs are long int based</ans>
+		</question>
+		<question txt="How can you stylize your HTML5 files?">
+			<ans correct="0">From within the HTML5 file</ans>
+			<ans correct="0">In a CSS file</ans>
+			<ans correct="0">None of the above</ans>
+			<ans correct="1">All of the above</ans>
+		</question>
+	</quiz>
+</unit>
+
+</edu>

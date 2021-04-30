@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edu>
+
+	<unit title="Unit 2: JavaScript &amp; HTML5 Canvas">
+	<overview>
+		<para>
+			For Unit 2, you will be introduced to the main concepts and basic structure to JavaScript (not to be confused with Java). The following information has been sourced from Athabasca University COMP 466 and Internet and World Wide Web How To Program, 5th Edition (Deitel, Harvey, Abbey Deitel).
+		</para>
+		<para>
+			Following the completion of this tutorial, a quiz to test your knowledge will be available.
+		</para>
+	</overview>
+	<chapter title="JavaScript">
+		<overview>
+			<para>
+				Now that you know the basics of HTML5 and CSS3, you might be wondering how to do things like calculations, event handling, or creating a dynamic web page. This is where Javascript can improve your web pages greatly. This is not the same as Java which is object orientated. Javascript is a scripting language to enhance both the appearance and functionality of web pages.
+			</para>
+		</overview>
+		<section title="Javascript Basics">
+			<para>
+				Similar to CSS, you can have inline Javascript code within your HTML5 files or you can choose to have a seperate .js file and simply link it in your HTML5. In order to use Javascript inline you need to create a script element as follows (Deital p.187)
+			</para>
+			<image src="img/fig6-1_p187.png">
+				Figure 1. Example of Javascript Element
+			</image>
+			<para>
+				In this example, a line was simply written to the document/ web page. If you would rather use javascript in a seperate file than you simply need to add '&lt;script src="nameOfFile.js" type="text/javascript"&gt;&lt;/script&gt;' to your HTML5 file. his doesn't necessarily need to go into the head of your file. Since your web browser will chronologically process the HTML5 and script in the order it is presented, if you have 'global' function or reference elements that have not yet been processed than the browser will throw an error. It doesn't know that the element you are referencing is below the script element. It may be safe to put your script element below your HTML5 content or try to design a system where this wouldnt be an issue.
+			</para>
+			<para>
+				There are a few basics that we will be covering in this tutorial which will include how to common knowledge with Javascript, call functions, and trigger events.
+			</para>
+		</section>
+		<section title="Common Javascript Elements and Concepts">
+			<para>
+				There are a few main objects and methods that would be excellent to understand as an introduction to Javascript. Before listing some of them, it should be noted that Javascript behaves similarly to python in that it does not explicitly define an element's/object's type. You do not need to specifiy the parameter type (ie. function(nameOfParam){} rather than function(int name){}) or need to specifying one for a variable. You can simply give the type 'var' for every variable you create (similar to the capabilities of C#). With that in mind, here is a list of some common Javascript knowledge:
+			</para>
+			<definition term="Document">
+				The 'document' object represents the HTML5 document object. This gives you access to all of the elements found in the file. These are known as the Document Object Model (DOM) which we will later discuss how to get elements and attributes for these objects.
+			</definition>
+			<definition term="Methods of DOM">
+				Similar to the concept of a class object, DOM objects have attributes and methods which can be called. For example if we want to write a line to the document, the method 'writeln()' can be called.
+			</definition>
+			<code>document.writeln("Hello World!")</code>
+			<definition term="Attributes of DOM">
+				Objects have attributes that can be set or simply just to get the value of an attribute. You can call the method '.setattribute(...)' or to modify/get CSS attributes you can directly set them. For example if you want to hide an element you can do the following
+			</definition>
+			<code>myClass.style.display = 'none';</code>
+			<definition term="Semi-colon">
+				The semi colon is not required but it is greatly advised to reduce any bugs that may occur
+			</definition>
+			<definition term="Case Sensitive">
+				Javascript is case sensitive so be sure to have the correct casing!
+			</definition>
+			<definition term="Quotes">
+				You can mix and match single quotes ' with double quotes " and they should work the same in any case. What is useful is when you want to display either single/ double quotes to the user. You should then nest the quotes you wish to show in the opposing quotes.
+			</definition>
+			<definition term="Window">
+				The window object can be thought of as the browser window. You can invoke an alert dialog (a), create a function that will be called when the window loads (b), and even get a user's input from a window prompt (c). We will discuss this syntax later in the tutorial.
+			</definition>
+			<code>(a) window.alert("Warning!")</code>
+			<code>(b) window.onload() = function() {};</code>
+			<code>(c) window.prompt("Please enter a number");</code>
+			<definition term="Concatinating Vs. Adding">
+				The '+' symbol can be used to concatinate strings as well as add numbers. You must be careful with this and not confuse concatinating string with adding numbers. Look at the following as an example, where y = 5.
+				<code>y + 2 =" + y + 2</code>
+				<code>Expected: "y + 2 = 7"</code>
+				<code>Result: "y + 2 = 52"</code>
+				This is the wrong result since we mixed string with integer values. We need to specify exactly that we want to add two integers by grouping them within brackets. This will add (y + 2) as ints then concat them with the "y + 2 =" string.
+				<code>y + 2 =" + (y + 2)</code>
+				<code>Result: "y + 2 = 7"</code>
+			</definition>
+			<definition term="Strict Equals/Not Equals">
+				Typically it is good enough to compare two objects/values with a == a or a != b. But in Javascript the following condition would also return true, "72" == 72, even though one is a string and another is an integer. To strictly compare you must use '===' or '!=='
+			</definition>
+			<code>"72" === 72 will result in false</code>
+			<definition term="If Condition">
+				You can use if, else if, and else as you would with any other programming language.
+			</definition>
+			<code>if(condition){}else if(condition){} else{};</code>
+			<definition term="While Loops">
+				You can loop until a condition is met with
+			</definition>
+			<code>while(condition){};</code>
+			<definition term="For Loops">
+				A for loop allows you to iterate through an indexed array or list.
+			</definition>
+			<code>for(...){}</code>
+			<definition term="Increment, Decrement">
+				For integers, you can easilly increment or decrement them with the following
+			</definition>
+			<image src="img/fig7-13_p239.png">
+				Figure 2. Javascript Increment &amp; Decrement
+			</image>
+		</section>
+		<section title="Function">
+			<para>You can create functions in Javascript that will help you group together common code with parameters. For example the basic structure is:
+			</para>
+			<code>function AddTwo(input) { return input + 2; }</code>
+			<para>
+				You can also use common function such as many Math functions. To list a few:
+			</para>
+			<code>Math.pow(2,3) is 2 to the power of 3</code>
+			<code>Math.random() returns a random number</code>
+			<code>Math.floor(2.33), Math.ceil(2.99), Math.round(2.5) will round your values</code>
+			<para>
+				You can retrieve HTML5 elements by their id, class, etc.
+			</para>
+			<code>
+				document.getElementById("idVal") or using jquery $("#idVal") to retrieve an element by their ID
+			</code>
+			<code>
+				document.getElementsByClassName("classVal") or using jquery $(".classVal") to get elements by their class
+			</code>
+			<para>
+				You can also have recursive functions (function that call itself) or iterative functions.
+			</para>
+		</section>
+		<section title="Event Handling">
+			<para>
+				Buttons, forms, inputs, and various other HTML5 elements can trigger events! Javascript allows you to control what happens when they are triggered. You can either use a inline functions, global elements, or use JQuery to invoke these methods.
+			</para>
+			<definition term="Inline">
+				In your HTML5 element you can set the event method to call a javascript method you have written.
+			</definition>
+			<image src="img/inline_event.png">
+				Figure 3. Inline Javascript
+			</image>
+			<definition term="Global">
+				You can retrieve the element and then use their event handling method in a global way
+			</definition>
+			<image src="img/global_event.png">
+				Figure 4. Global Element
+			</image>
+			<definition term="JQuery">
+				If you use JQuery, you can use a shorter form than having to globally retrieve the element first
+			</definition>
+			<image src="img/jquery_event.png">
+				Figure 5. Using JQuery
+			</image>
+		</section>
+	</chapter>
+	<chapter title="HTML5 Canvas">
+		<overview>
+			<para>
+				The canvas element is used to create 2D graphics, animation, images, videos. This is where you can let your creativity shine with more artistic elements. The canvas works with a grid system of (x horizontal, y vertical). top left corner has the grid value of (0,0). Moving right will increase the x value (ie. (50,0) is 50 pixels to the right of the top left corner). Moving down will increase the y coordinate (ie. (50,10) is 50 px right and 10 px down from the left corner).
+			</para>
+		</overview>
+		<section>
+			<para>
+				Below is an example of the canvas element (Deital p.446)
+			</para>
+			<image src="img/fig14-2_p446.png">
+				Figure 6. Code for a Canvas Element
+			</image>
+			<para>
+				There is so much you can do with the canvas element so it would be best to explore <a href="https://www.w3schools.com/html/html5_canvas.asp">here</a>!
+			</para>
+		<conclusion>
+			This concludes the tutorial on Javascript and HTML5 Canvas. Please try out the quiz to test out your knowledge on this unit.
+		</conclusion>
+		</section>
+	</chapter>
+	<quiz title="Unit 2 Quiz">
+		<question txt="Is Javascript the same as Java?">
+			<ans correct="0">No, one is a compueter language and another is a coffee type</ans>
+			<ans correct="1">No, one is a web scripting language and the other is object orientated</ans>
+			<ans correct="0">Yes, Javascript is special type of Java</ans>
+			<ans correct="0">Yes, Java is a special type of Javascript</ans>
+		</question>
+		<question txt="What does DOM stand for?">
+			<ans correct="1">Document Object Model</ans>
+			<ans correct="0">Data Objective Model</ans>
+			<ans correct="0">Document Ordered Model</ans>
+			<ans correct="0">Data Object Manager</ans>
+		</question>
+		<question txt="What are the purpose of semi colons?">
+			<ans correct="0">They are ignored so you can put them anywhere</ans>
+			<ans correct="1">They are not required but terminate a line</ans>
+			<ans correct="0">They are absolutely required to terminate a line</ans>
+			<ans correct="0">They are special characters and should not be used</ans>
+		</question>
+		<question txt='What is the result of "y + 5 = " + y + 5, when y = 1?'>
+			<ans correct="0">"y + 5 = 6"</ans>
+			<ans correct="0">"y + 5 = y + 5"</ans>
+			<ans correct="0">"y + 5 = y5"</ans>
+			<ans correct="1">"y + 5 = 15"</ans>
+		</question>
+		<question txt='How do you get the result "x + 10 = 30", when x = 20?'>
+			<ans correct="0">("x + 10 = ") + x + 10</ans>
+			<ans correct="0">"x + 10 = " + (x) + 10</ans>
+			<ans correct="1">"x + 10 = " + (x + 10)</ans>
+			<ans correct="0">("x + 10") + (x) + (10)</ans>
+		</question>
+		<question txt="How can you trigger an event?">
+			<ans correct="1">With JQuery, $("#test").onclick = function() {}</ans>
+			<ans correct="0">With global javascript (ie. OnClick.Button() {});</ans>
+			<ans correct="0">With inline HTML5. Where special elements have the tag as the event trigger (ie. &lt;onclick&gt;)</ans>
+			<ans correct="0">All of the above</ans>
+		</question>
+		<question txt="Where is (0, 0) on the HTML5 Canvas element">
+			<ans correct="0">Top Right Corner</ans>
+			<ans correct="0">Center of the element</ans>
+			<ans correct="0">Bottom Left</ans>
+			<ans correct="1">Top Left</ans>
+		</question>
+	</quiz>
+</unit>
+
+</edu>
