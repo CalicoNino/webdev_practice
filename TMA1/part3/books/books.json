@@ -1,85 +1,85 @@
-[{
-        "image": "1984.png",
-        "caption": "1984 by George Orwell"
-    },
-    {
-        "image": "animalfarm.png",
-        "caption": "Animal Farm by George Orwell"
-    },
-    {
-        "image": "caseforchrist.png",
-        "caption": "The Case for Christ by Lee Strobel"
-    },
-    {
-        "image": "catcherandtherye.png",
-        "caption": "the Catcher and the Rye by J. D. Salinger"
-    },
-    {
-        "image": "comtedemonte-cristo.png",
-        "caption": "Le Comte de Monte-Cristo by Alexandre Dumas"
-    },
-    {
-        "image": "darkterritory.png",
-        "caption": "Dark Territory: The Secret History of Cyebr War by Fred Kaplan"
-    },
-    {
-        "image": "express.png",
-        "caption": "Murder on the Orient Express by Agatha Christie"
-    },
-    {
-        "image": "ghostinthewires.png",
-        "caption": "Ghost in the Wires by Kevin Mitnick"
-    },
-    {
-        "image": "horla.png",
-        "caption": "Le Horla et autres contes fantastiques by Guy de Maupassent"
-    },
-    {
-        "image": "joyland.png",
-        "caption": "Joyland by Stephen King"
-    },
-    {
-        "image": "llddz.png",
-        "caption": "llddz by Jacques Lazure"
-    },
-    {
-        "image": "lovelybones.png",
-        "caption": "The Lovely Bones by Alice Sebold"
-    },
-    {
-        "image": "odyssee.png",
-        "caption": "L'Odyssee by Homere"
-    },
-    {
-        "image": "oldmanandthesea.png",
-        "caption": "The Old Man and The Seas by Ernest Hemingway"
-    },
-    {
-        "image": "perksofbeingawallflower.png",
-        "caption": "The Perks of Being a Wallflower by Stephen Chbosky"
-    },
-    {
-        "image": "poison_rouge.png",
-        "caption": "Rouge Poison by Michele Marineau"
-    },
-    {
-        "image": "routedechilfa.png",
-        "caption": "La Route de Chlifa"
-    },
-    {
-        "image": "security.png",
-        "caption": "Security by Gina Wohsdorf"
-    },
-    {
-        "image": "stuxnet.png",
-        "caption": "Coutdown to Zero Day by Kim Zetter"
-    },
-    {
-        "image": "theprince.png",
-        "caption": "The Prince by Niccolo Machiavelli"
-    },
-    {
-        "image": "zeros.png",
-        "caption": "Zeros by Chuck Wendig"
-    }
-]
+{"books" : [{
+    "image": "./books/1984.png",
+    "caption": "1984 by George Orwell"
+},
+{
+    "image": "./books/animalfarm.png",
+    "caption": "Animal Farm by George Orwell"
+},
+{
+    "image": "./books/caseforchrist.png",
+    "caption": "The Case for Christ by Lee Strobel"
+},
+{
+    "image": "./books/catcherandtherye.png",
+    "caption": "the Catcher and the Rye by J. D. Salinger"
+},
+{
+    "image": "./books/comtedemonte-cristo.png",
+    "caption": "Le Comte de Monte-Cristo by Alexandre Dumas"
+},
+{
+    "image": "./books/darkterritory.png",
+    "caption": "Dark Territory: The Secret History of Cyebr War by Fred Kaplan"
+},
+{
+    "image": "./books/express.png",
+    "caption": "Murder on the Orient Express by Agatha Christie"
+},
+{
+    "image": "./books/ghostinthewires.png",
+    "caption": "Ghost in the Wires by Kevin Mitnick"
+},
+{
+    "image": "./books/horla.png",
+    "caption": "Le Horla et autres contes fantastiques by Guy de Maupassent"
+},
+{
+    "image": "./books/joyland.png",
+    "caption": "Joyland by Stephen King"
+},
+{
+    "image": "./books/llddz.png",
+    "caption": "llddz by Jacques Lazure"
+},
+{
+    "image": "./books/lovelybones.png",
+    "caption": "The Lovely Bones by Alice Sebold"
+},
+{
+    "image": "./books/odyssee.png",
+    "caption": "L'Odyssee by Homere"
+},
+{
+    "image": "./books/oldmanandthesea.png",
+    "caption": "The Old Man and The Seas by Ernest Hemingway"
+},
+{
+    "image": "./books/perksofbeingawallflower.png",
+    "caption": "The Perks of Being a Wallflower by Stephen Chbosky"
+},
+{
+    "image": "./books/poison_rouge.png",
+    "caption": "Rouge Poison by Michele Marineau"
+},
+{
+    "image": "./books/routedechilfa.png",
+    "caption": "La Route de Chlifa"
+},
+{
+    "image": "./books/security.png",
+    "caption": "Security by Gina Wohsdorf"
+},
+{
+    "image": "./books/stuxnet.png",
+    "caption": "Coutdown to Zero Day by Kim Zetter"
+},
+{
+    "image": "./books/theprince.png",
+    "caption": "The Prince by Niccolo Machiavelli"
+},
+{
+    "image": "./books/zeros.png",
+    "caption": "Zeros by Chuck Wendig"
+}
+]}

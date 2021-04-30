@@ -1,0 +1,55 @@
+<div class="m-4">
+	<h5> Mortgage Calculator </h5>
+	<hr/>
+
+	<div>
+		<label class="font-weight-bold">Mortgage Amount($): </label>
+		<input type="Number" onchange="mortgageCalc()" id="amount"/ min="0">
+	</div><br>
+
+	<div>
+		<label class="font-weight-bold">Down Payment($): </label>
+		<input type="Number" onchange="mortgageCalc()" id="down"/ min="0">
+	</div><br> 
+
+	<div>
+		<label class="font-weight-bold">Mortgage Interest(%): </label>
+		<input type="number" onchange="mortgageCalc()" id="interest"/ min="1" max="100">
+	</div><br>
+
+	<div>
+		<label class="font-weight-bold">Total Duration: </label>
+		<input type="number" onchange="mortgageCalc()" id="years"/ min="1">
+	</div><br>
+
+	<div>
+		<h6>Payment Frequency: </h6>
+		<div>
+			<ul class="bg-white">
+				<li class="text-dark mx-4 font-weight-bold">
+					<input type="radio" name="frequecy" onchange="mortgageCalc()" value="weekly">
+					<label class="form-check-label"> Weekly </label>
+				</li>
+				<li class="text-dark mx-4 font-weight-bold">
+					<input type="radio" name="frequecy" onchange="mortgageCalc()" value="bi-monthly">
+					<label class="form-check-label"> Bi-Monthly </label>
+				</li>
+				<li class="text-dark mx-4 font-weight-bold">
+					<input type="radio" name="frequecy" onchange="mortgageCalc()" value="monthly">
+					<label class="form-check-label"> Monthly </label>
+				</li>
+				<li class="text-dark mx-4 font-weight-bold">
+					<input type="radio" name="frequecy" onchange="mortgageCalc()" value="yearly">
+					<label class="form-check-label"> Yearly </label>
+				</li>
+			</ul>		
+		</div>
+	</div><br>
+	<hr/>
+	<h6 class="font-weight-bold">Mortgage Payment Price: </h6>
+	<div class="border border-dark rounded p-4">
+		<h5 id="payment"></h5>
+	</div>
+	
+
+</div>

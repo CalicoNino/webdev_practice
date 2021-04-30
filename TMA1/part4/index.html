@@ -1,68 +1,79 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
-    <title>Convertor</title>
+    <title>Useful Tools</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="logo.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../shared/shared.css" type="text/css" />
 </head>
 
 <body>
+    <ul class="hmul">
+        <li class="hmli"><a href="../tma1.htm">Home</a></li>
+        <li class="hmli"><a href="../part1/">Part 1</a></li>
+        <li class="hmli"><a href="../part2/index.html">Part 2</a></li>
+        <li class="hmli"><a href="../part3/index.html">Part 3</a></li>
+        <li class="hmli"><a class="active" href="../part4/index.html">Part 4</a></li>
+    </ul>
     <div class="container-fluid text-center">
         <div class="row content">
-            <div height="100%" class="col-sm-2">
+            <div class="col-sm-2 sidenav">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle my-4 mx-auto" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Conversion Tool
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" id=Areas href='#' onClick="windowArea()">Area</a>
+                        <a class="dropdown-item" id=Volumes href='#' onClick="windowVolume()">Volume</a>
+                        <a class="dropdown-item" id=Length href='#' onClick="windowLength()">Length</a>
+                        <a class="dropdown-item" id=Weight href='#' onClick="windowWeight()">Weight</a>                       
+                    </div>
+                </div>
+                <div class="card text-light bg-secondary text-left pt-3 pb-1 px-3">
+                    <p>This tool allows for conversions between units from different mesurements such as Area, Length, Volume and Weight</p>
+                    <p>The units chosen for each mesurements are based off North American Most used units.</p>
+                </div>
                 <hr />
-                <div class="well" style="background-color: black;">Basic Well</div>
+                <button id=MortgageCalc onClick="windowMortgage()" class="btn btn-secondary my-4 mx-auto" type="button" aria-haspopup="true">
+                    Mortgage Calculator
+                </button>
+                <div class="card text-light bg-secondary text-left pt-3 pb-1 px-3">
+                    <p>This tool allows for Mortgage Calculation based off the total amount, the down payment, interest and frequency of payements.</p>
+                </div>
                 <hr />
-                <div class="well" style="background-color: gold;">Basic Well</div>
-                <hr />
-                <div class="well" style="background-color: black;">Basic Well</div>
-                <hr />
-                <div class="well" style="background-color: gold;">Basic Well</div>
-                <hr />
-                <div class="well" style="background-color: black;">Basic Well</div>
+                <button id=QuadraticSolver onClick="windowQuadratic()" class="btn btn-secondary  my-4 mx-auto" type="button" aria-haspopup="true">
+                    Quadratic Solver
+                </button>
+                <div class="card text-light bg-secondary text-left pt-3 pb-1 px-3">
+                    <p>This tool is very important for mathemticians and engineers as it helps find the roots of quadratic equations.</p>
+                </div>
                 <hr />
             </div>
 
             <div class="col-sm-8 text-left">
                 <hr />
-                <h1>Welcome to Web Tutorials</h1>
-                <form>
-                    <label for="category">Choose Category:</label>
-                    <select name="category" id="category">
-                        <option value="weight">Weight</option>
-                        <option value="areas">Areas</option>
-                        <option value="volumes">Volumes</option>
-                    </select>
-                    <input type="submit" value="Submit">
-                </form>
+                <h1>Useful Tools</h1>
                 <hr />
-
-
+                <h5>On the Right side you would find the list of tools and their details.</h5>
+                <hr/>
+                
+                
+                <div id=contentWindow class="border border-secondary rounded p-4">
+                    Each Tool will be displayed here!
+                </div>
             </div>
-            <div class="col-sm-2">
-                <hr />
-                <div class="well" style="background-color: gold;">Basic Well</div>
-                <hr />
-                <div class="well" style="background-color: black;">Basic Well</div>
-                <hr />
-                <div class="well" style="background-color: gold;">Basic Well</div>
-                <hr />
-                <div class="well" style="background-color: black;">Basic Well</div>
-                <hr />
-                <div class="well" style="background-color: gold;">Basic Well</div>
-                <hr />
+            <div  class="col-sm-2 sidenav">
             </div>
         </div>
     </div>
-    <footer>
-        <p>Copyright &copy; 2020 The Golden Roast.</p>
-    </footer>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

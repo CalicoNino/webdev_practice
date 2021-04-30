@@ -12,21 +12,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="../shared/shared.css" type="text/css"/>
 </head>
 
 <body>
+    <ul class="hmul">
+        <li class="hmli"><a href="../tma1.htm">Home</a></li>
+        <li class="hmli"><a href="../part1/">Part 1</a></li>
+        <li class="hmli"><a class="active" href="../part2/index.html">Part 2</a></li>
+        <li class="hmli"><a href="../part3/index.html">Part 3</a></li>
+        <li class="hmli"><a href="../part4/index.html">Part 4</a></li>
+    </ul>
     <nav class="navigation bg-warning">
         <div id="mySidenav" class="sidenav bg-warning">
             <a href="javascript:void(0)" class="closebtn" onClick="closeSideNav()">&times;</a>
             <a href="index.html">Home</a>
             <a href="unit1.html">Unit 1</a>
-            <a href="quiz1.html"><h6>Quiz 1</h6></a>
+            <a href="quiz1.html">
+                <h6>Quiz 1</h6>
+            </a>
             <a href="unit2.html">Unit 2</a>
-            <a href="quiz2.html"><h6>Quiz 2</h6></a>
+            <a href="quiz2.html">
+                <h6>Quiz 2</h6>
+            </a>
             <a href="unit3.html">Unit 3</a>
-            <a href="quiz3.html"><h6>Quiz 3</h6></a>
+            <a href="quiz3.html">
+                <h6>Quiz 3</h6>
+            </a>
         </div>
-        <button class="btn btn-warning text-light" onClick="openSideNav()">&#9776;</button>
+        <button class="btn btn-warning text-dark font-weight-bold" onClick="openSideNav()">&#9776; Side Menu</button>
         <h4 class="navigation-logo">
             Rainbow Globe
             <a href="index.html" style="text-decoration:none;">
@@ -76,17 +90,161 @@
                 <hr />
                 <h1>Unit 1: Introduction 1 – the Web, HTML5, and CSS</h1>
                 <hr />
-                <p>
-                    This website is dedicated to teaching the main units on Web Development and Design. Created in 2020,
-                    it encompases various technologieas that are used throught the industry, from HTML to AJAX. The
-                    layout of Rainbow Globe Web Tutorials is as follows, on the left sidebar of each page there holds
-                    the terminologies and definitions and on the right sidebar threshold important facts and guidelines
-                    that each web developer should be aware of. Both sidebars hold information that is important to all
-                    units.
-                </p>
+
                 <button type="button" class="btn btn-warning"
                     onclick="confirm('Are you sure you are ready to start quiz?'); window.location.href='quiz1.html';">Start
-                    Quiz</button>
+                    Quiz</button><hr />
+
+                <h2>Introduction</h2>
+                <hr />
+                <p>When you surf the internet what types of things do you think occurs in the background? How does it
+                    know what to display? How does it know when you click or input items? All of these 'things' are a
+                    result of a web system in which a web server and web client communicate with each other.</p>
+                <ul>
+                    <li><a class="font-weight-bold">Web Server:</a> Processes client (user) input and responds to their requests</li>
+                    <ul>
+                        <li>returning documents and files to client</li>
+                        <li>retreiving and committing data to client (REST)</li>
+                    </ul>
+                    <li><a class="font-weight-bold">Web Client:</a> sends requests to the server and is usally known as the 'web
+                        browser'</li>
+                </ul>
+                <p>This can all be done through HTTP</p>
+                <ul>
+                    <li><a class="font-weight-bold">HTTP:</a> HyperText Transfer Program, transfers files and requests
+                        over internet/intranet</li>
+                </ul>
+
+                <h2>HTTP</h2>
+                <hr />
+                <p>All websites you have come across essentially are made up of HTML files and are accessed using
+                    URIs/URLs</p>
+                <ul>
+                    <li><a class="font-weight-bold">HTML:</a> HyperText Markup Language, this describes the content of what to be
+                        dislplayed to a web page. These files have the extention .html or .htm</li>
+                    <li><a class="font-weight-bold">URI:</a> Uniform Resource Identifiers, in general they identify resources on the
+                        internet</li>
+                    <li><a class="font-weight-bold">URL:</a> Uniform Resource Lookup, these are URIs that begin with http:// and
+                        commonly involve file, directory, internet searches and/or database lookups</li>
+                </ul>
+                <p>In order for a web page to display commication must be performed between the client and the server.
+                    First the client (user) would type in a URL into a web browser with HTTP. This results in a request
+                    being sent to the webpage of the address. The server would then receive this request and lookup the
+                    resource that the client has requested for. After finding the resource the server will respond to
+                    the client with the resources' contents. The following images (Deital p.607-608) explains this
+                    process quite nicely.</p>
+                <div>
+                    <img src="img/fig17-1_Deitel_607.png">
+                    <img src="img/fig17-2_Deitel_608.png">
+                </div>
+                <p>There are various request types such as GET and POST. GET asks the server to retrieve the the
+                    information such as data, images, or files. POST usually will send data to the server where it can
+                    either add it to a database or process the information.</p>
+                <p>Typically in a web system, you'll find a multi-tier architecture. This will be comprised of a bottom
+                    tier (database layer), middle tier (business controller logic), and lastly the top tier/ client tier
+                    (GUI layer).</p>
+
+                <h2>HTML5 Basics</h2>
+                <hr />
+                <p>After an introduction to what goes on behind the scenes of a webpage, you might be wondering about
+                    the HTML that make this all possible. If you have experience with programming languages such as C,
+                    C++, C#, and Java, you might think HTML should be a similar enough. Wrong! HTML5 is a markup
+                    language that specifies both the structure as well as the content of a web page.</p>
+                <p>The most basic structure of an HTML5 file will be as follows (Deital p.39)</p>
+                <div>
+                    <img src="img/fig2-1_Deital_39.png">
+                </div>
+                <p>This is the skeleton that makes up any and all HTML5 files you view in a web browser today. We will
+                    quickly break down what the above file is composed of.</p>
+                <ul>
+                    <li><a class="font-weight-bold">Line 1:</a> This is the Document type, web browsers require this line in order
+                        for it to know what type of file it will be processing (compatibility etc.)</li>
+                    <li><a class="font-weight-bold">Lines 2-3:</a> These lines are comments and will be ignored by the browser</li>
+                    <li><a class="font-weight-bold">Lines 6-9:</a> This tag element is known as the Head. It contains the information
+                        of the HTML5 for the browser to properly know what to do with the file (encodings, title, style
+                        CSS, etc.)</li>
+                    <li><a class="font-weight-bold">Lines 11-13:</a> This is the Body, where all of a web page's content is written.
+                    </li>
+                </ul>
+                <p>To break down the terminology of the structures in an HTML5 file further, the following list will
+                    provide a basic syntax:</p>
+                <ul>
+                    <li><a class="font-weight-bold">Element:</a> As seen above, the head and body elements are required in every
+                        HTML5. An element is usually in the form &lt;tagname&gt;content&lt;/tagname&gt; (paragraphs,
+                        list items, headers, etc.). They can also be written without an end tag when no content is
+                        required and will be in the form &lt;tagname/&gt;</li>
+                    <li><a class="font-weight-bold">Nested Elements:</a> These are known as elements that fall within another element
+                        (ie. the title element at line 8)</li>
+                    <li><a class="font-weight-bold">Attributes:</a>Within the starting tag of an element, you can specify properties
+                        of the element using attributes. These follow the form attributeName="attributeValue". Common
+                        attributes include the class (grouping), id (unique identifier), and src (for images and other
+                        media).
+                    </li>
+                </ul>
+
+                <h2>Common Elements</h2>
+                <hr />
+                <p>These are a few of the most common elements in HTML5</p>
+                <ul>
+                    <li><a class="font-weight-bold">Headings:</a> Have you noticed the various "titles" on this webpage and their
+                        varying sizes? Well that is the result of using the heading element,
+                        &lt;h1&gt;Title&lt;/h1&gt;<br />
+                        Headings h1 (biggest) - h6 (smallest) are available to use. These act as titles that can help
+                        organize and display your web page<br />
+                        <h3>Example h3 Title</h3>
+                    </li>
+                    <li><a class="font-weight-bold">Paragraphs:</a> Just as the name suggests this element can create a paragraph of
+                        text &lt;p&gt;My paragraph&lt;/p&gt;
+                        <p>Example paragraph</p>
+                    </li>
+                    <li><a class="font-weight-bold">Links:</a> You can make most elements act as clickable links using &lt;a
+                        href="http://google.ca"&gt;Click me for google&lt;/a&gt;. For example: <a
+                            href="http://google.ca">Google!</a></li>
+                    <li><a class="font-weight-bold">Images:</a> Images, like the figures you have seen on this webpage, are shown
+                        using &lt;img src="pathToMyImg"&gt;. Note these do not need an end tag &lt;/img&gt; or a /&gt;
+                    </li>
+                    <li><a class="font-weight-bold">Lists:</a> You can make bulleted/unordered lists &lt;ul&gt; or numbered/ordered
+                        lists &lt;ol&gt;. Within these you create nested list item elements &lt;li&gt;
+                        <ol>
+                            <li>example</li>
+                            <li>another example</li>
+                        </ol>
+                    </li>
+                    <li><a class="font-weight-bold">Table:</a> Tables are a bit more complex than the above elements. The general
+                        outline is as follows. You can look into addings headers and footers as they are quite
+                        straighforward.<br />
+                        &lt;table&gt;<br />
+                        &lt;tr&gt;Insert a row&lt;/tr&gt;<br />
+                        &lt;th&gt;Column1&lt;/th&gt;<br />
+                        &lt;th&gt;Column2&lt;/th&gt;<br />
+                        &lt;/tr&gt;<br>
+                        &lt;/table&gt;<br>
+                        <table border="1px solid black">
+                            <tr>
+                                <th>Banana</th>
+                                <th>Yellow</th>
+                            </tr>
+                            <tr>
+                                <th>Apple</th>
+                                <th>Red</th>
+                            </tr>
+                        </table>
+                    </li>
+                    <li><a class="font-weight-bold">Form:</a> This element helps to collect information from the user. This can also
+                        bundle together radio buttons and other elements together which requires user input.
+                        &lt;form&gt;Contains a lot of elements&lt;/form&gt;
+                    </li>
+                    <li><a class="font-weight-bold">Input:</a> As mentioned above these represent radio buttons, check boxes, text
+                        boxes, datetime, etc. &lt;input type="radio" name="grouping"&gt; Text<br />
+                        <input type="radio" name="test"> Select Me!<br>
+                    </li>
+                </ul>
+                <p>The best way in my opinion to learning what you can do is to google and research! There are so many
+                    elements and neat tricks you can do with them in order to make your webpage truely interactive and
+                    better. Just remember in order for you to follow good coding rules you can should always validate
+                    your HTML5 file. This can be done <a href="https://validator.w3.org/">here</a></p>
+
+
             </div>
             <div height="100%" class="col-sm-2">
                 <hr />

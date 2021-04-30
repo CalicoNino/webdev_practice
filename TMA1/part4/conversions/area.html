@@ -1,0 +1,63 @@
+<div class="m-4">
+	<h5> Area Conversions </h5>
+	<hr />
+
+	<label class="font-weight-bold">Enter value to Convert: </label>
+	<input type="text" onchange="conversion()" id="input">
+
+	<div>
+		<h5>From: </h5>
+		<ul class="bg-white">
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="cm2">
+				<label class="form-check-label"> cm<sup>2</sup> </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="m2">
+				<label class="form-check-label"> m<sup>2</sup> </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="foot2">
+				<label class="form-check-label"> foot<sup>2</sup> (ft<sup>2</sup>) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="yard2">
+				<label class="form-check-label"> yard<sup>2</sup></label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="acre">
+				<label class="form-check-label"> Acre (ac) </label>
+			</li>
+		</ul>		
+	</div>
+	<div>
+		<h5>To: </h5>
+		<ul class="bg-white">
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="cm2">
+				<label class="form-check-label"> cm<sup>2</sup> </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="m2">
+				<label class="form-check-label"> m<sup>2</sup> </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="foot2">
+				<label class="form-check-label"> foot<sup>2</sup> (ft<sup>2</sup>) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="yard2">
+				<label class="form-check-label"> yard<sup>2</sup></label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="acre">
+				<label class="form-check-label"> Acre (ac) </label>
+			</li>
+		</ul>		
+	</div>
+
+	<hr/>
+	Conversion below: <br/>
+	<h6 id="output"></h6>
+	<hr/>
+</div>

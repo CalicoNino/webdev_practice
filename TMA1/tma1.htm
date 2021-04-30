@@ -5,26 +5,93 @@
     <title>TMA1 Main Page</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./shared/shared.css" type="text/css"/>
 </head>
 
 <body>
     <div>
-        <div class="container-fluid text-center">    
-          <div class="row content">
-            <div height="100%" class="col-sm-2 sidenav">
-              <hr/>
-            </div>
-
-            <div class="col-sm-8 text-left"> 
-              <h1>TMA1</h1>
-              <hr/>
-            </div>
-            <div class="col-sm-2 sidenav">
-              <hr/>
-            </div>
+      <ul class="hmul">
+        <li class="hmli"><a class="active" href="./tma1.htm">Home</a></li>
+        <li class="hmli"><a href="./part1/">Part 1</a></li>
+        <li class="hmli"><a href="./part2/index.html">Part 2</a></li>
+        <li class="hmli"><a href="./part3/index.html">Part 3</a></li>
+        <li class="hmli"><a href="./part4/index.html">Part 4</a></li>
+      </ul>
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div height="100%" class="col-sm-2 sidenav">
           </div>
+
+          <div class="col-sm-8 text-left"> 
+            <hr />
+            <h1>TMA1</h1>
+            <hr/>
+            <h4>Advanced Technologies for Web-based Systems | Computer Science 466</h4>
+            <h5>By Karim El Shenawy | 3471139 </h5>
+            <h6>Assignment Created: January 20th 2021 </h6>
+            <h6>Assignment Completed: March 27th 2021 </h6>
+            <h6>Estimated Hours Spent: 60</h6>
+            <hr />
+            <p>To Run, simply go the the website link <a class="bold" href="https://tma1.netlify.app/tma1.htm">tma1.netlify.app/tma1.htm</a></p>
+            <p>You can also run the <a class="bold" href="tma1.htm">tma1.htm</a> in your local browser after downloading the files. 
+              This might cause some issues as some parts of the website require a server running therefore a server like apache on XAMPP will also be needed.</p>
+            <hr />
+            <p>This Assignmnet is divided in 3 parts that can be accessed through the global top navbar.</p>
+            <p>All references can be found in the ref.txt file.</p>
+            <h4>Please Enjoy!</h4>
+            <hr />
+            Here are some documentation and comments on each projects:
+
+            <h4>Part 1</h4>
+            <ul>
+              <li><span>Description:</span> this section is my resume in XML format included with styling.</li>  
+              <li><span>Analysis:</span> I divided the sections of my resume based off importance.</li>  
+              <li><span>Documentation:</span> Standard XML documentation used.</li>  
+              <li><span>User Guide:</span> To view, you can not use the NavBar link. You must view them locally.</li>
+            </ul>
+
+            <h4>Part 2</h4>
+            <ul>
+              <li><span>Description:</span> this section is Rainbow Globe Web Tutorials, a virtual lecture and quizes for introduction to web development.</li>  
+              <li><span>Analysis:</span> it is divided into 3 units with all information is referenced and with cool facts on the sidebar. Quizes are also linked to each unit and are in JSON format so they can easily be editted for further use.</li>  
+              <li><span>Documentation:</span> All documentation can be found in the code as well as all references used are properly displayed.</li>  
+              <li><span>User Guide:</span> To view, direct to Part 2 in the NavBar.</li>
+            </ul>
+
+            <h4>Part 3</h4>
+            <ul>
+              <li><span>Description:</span> this section is My Book Collection Slideshow, a canvas slideshow of my books.</li>  
+              <li><span>Analysis:</span> A standard slideshow that has the options to stop, go to previous or next image, modify the sequence or the effect. 
+                I used the Session storage to save each image so I can easily draw again using ctx functinality on canvas. Each caption is also displayed ion the image. 
+                All images and captions are in a JSON file in the same directory as the source files.</li>  
+              <li><span>Documentation:</span> All documentation can be found in the code as well as all references used are properly displayed.</li>  
+              <li><span>User Guide:</span> To view, direct to Part 3 in the NavBar.</li>
+            </ul>
+
+            <h4>Part 4</h4>
+            <ul>
+              <li><span>Description:</span> this section is Usefool Tools, a collection of 3 tools, Conversions, Mortgage Calculator and Quadratic Solver.</li>  
+              <li><span>Analysis:</span> Each use a simple input and otput basis. In Conversions, I decided to use radio buttons to get the conversion of the user. This way, the user can't select multiple and cause a error.
+                  Mortgage calculator simply takes the required inputs for everyday banking mortgage systems in number input forms and computes and rounds the result.</li>  
+              <li><span>Documentation:</span> All documentation can be found in the code as well as all references used are properly displayed. the follwoing are important references used:
+                <ul>
+                  <li><a href="https://jsbeginners.com/mortgage-loan-javascript-calculator/">https://jsbeginners.com/mortgage-loan-javascript-calculator/</a></li>
+                  <li><a href="https://www.progiz.com/javascript/examples/quadratic-roots">https://www.progiz.com/javascript/examples/quadratic-roots</a></li>
+                </ul>
+              </li>  
+              <li><span>User Guide:</span> To view, direct to Part 4 in the NavBar.</li>
+            </ul>
+
+            <hr/>
+
+          </div>
+          <div class="col-sm-2 sidenav">
+          </div>
+        </div>
         </div>
 </body>
 

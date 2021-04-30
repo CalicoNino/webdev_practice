@@ -1,0 +1,64 @@
+<div class="m-4">
+	<h5> Weight Conversions </h5>
+	<hr />
+
+	<label class="font-weight-bold">Enter value to Convert: </label>
+	<input type="text" onchange="conversion()" id="input">
+
+	<div>
+		<h5>From: </h5>
+		<ul class="bg-white">
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="kg">
+				<label class="form-check-label"> Kilogram (kg) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="g">
+				<label class="form-check-label"> Gram (g) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="Ounce">
+				<label class="form-check-label"> Ounce (oz)</label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="Pound">
+				<label class="form-check-label"> Pound (lb) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="Ton">
+				<label class="form-check-label"> Ton </label>
+			</li>
+		</ul>		
+	</div>
+	<div>
+		<h5>To: </h5>
+		<ul class="bg-white">
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="kg">
+				<label class="form-check-label"> Kilogram (kg) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="g">
+				<label class="form-check-label"> Gram (g) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="Ounce">
+				<label class="form-check-label"> Ounce (oz)</label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="Pound">
+				<label class="form-check-label"> Pound (lb) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="Ton">
+				<label class="form-check-label"> Ton </label>
+			</li>
+		</ul>		
+	</div>
+
+	<hr/>
+	Conversion below: <br/>
+	<h6 id="output"></h6>
+	<hr/>
+
+</div>

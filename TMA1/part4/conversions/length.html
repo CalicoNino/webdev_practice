@@ -1,0 +1,63 @@
+<div class="m-4">
+	<h5> Length Conversions </h5>
+	<hr />
+
+	<label class="font-weight-bold">Enter value to Convert: </label>
+	<input type="text" onchange="conversion()" id="input">
+
+	<div>
+		<h5>From: </h5>
+		<ul class="bg-white">
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="cm">
+				<label class="form-check-label"> cm </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="m">
+				<label class="form-check-label"> m</label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="foot">
+				<label class="form-check-label"> Foot (ft)</label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="inch">
+				<label class="form-check-label"> Inch (In) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="From" onchange="conversion()" value="yard">
+				<label class="form-check-label"> Yard </label>
+			</li>
+		</ul>		
+	</div>
+	<div>
+		<h5>To: </h5>
+		<ul class="bg-white">
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="cm">
+				<label class="form-check-label"> cm </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="m">
+				<label class="form-check-label"> m</label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="foot">
+				<label class="form-check-label"> Foot (ft)</label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="inch">
+				<label class="form-check-label"> Inch (In) </label>
+			</li>
+			<li class="text-dark mx-4 font-weight-bold">
+				<input type="radio" name="To" onchange="conversion()" value="yard">
+				<label class="form-check-label"> Yard </label>
+			</li>
+		</ul>		
+	</div>
+
+	<hr/>
+	Conversion below: <br/>
+	<h6 id="output"></h6>
+	<hr/>
+</div>

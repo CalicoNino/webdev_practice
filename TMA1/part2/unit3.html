@@ -12,21 +12,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="../shared/shared.css" type="text/css"/>
 </head>
 
 <body>
+    <ul class="hmul">
+        <li class="hmli"><a href="../tma1.htm">Home</a></li>
+        <li class="hmli"><a href="../part1/">Part 1</a></li>
+        <li class="hmli"><a class="active" href="../part2/index.html">Part 2</a></li>
+        <li class="hmli"><a href="../part3/index.html">Part 3</a></li>
+        <li class="hmli"><a href="../part4/index.html">Part 4</a></li>
+    </ul>
     <nav class="navigation bg-warning">
         <div id="mySidenav" class="sidenav bg-warning">
             <a href="javascript:void(0)" class="closebtn" onClick="closeSideNav()">&times;</a>
             <a href="index.html">Home</a>
             <a href="unit1.html">Unit 1</a>
-            <a href="quiz1.html"><h6>Quiz 1</h6></a>
+            <a href="quiz1.html">
+                <h6>Quiz 1</h6>
+            </a>
             <a href="unit2.html">Unit 2</a>
-            <a href="quiz2.html"><h6>Quiz 2</h6></a>
+            <a href="quiz2.html">
+                <h6>Quiz 2</h6>
+            </a>
             <a href="unit3.html">Unit 3</a>
-            <a href="quiz3.html"><h6>Quiz 3</h6></a>
+            <a href="quiz3.html">
+                <h6>Quiz 3</h6>
+            </a>
         </div>
-        <button class="btn btn-warning text-light" onClick="openSideNav()">&#9776;</button>
+        <button class="btn btn-warning text-dark font-weight-bold" onClick="openSideNav()">&#9776; Side Menu</button>
         <h4 class="navigation-logo">
             Rainbow Globe
             <a href="index.html" style="text-decoration:none;">
@@ -76,68 +90,177 @@
                 <hr />
                 <h1>Unit 3: XML and Ajax</h1>
                 <hr />
-                <p>
-                    This website is dedicated to teaching the main units on Web Development and Design. Created in 2020,
-                    it encompases various technologieas that are used throught the industry, from HTML to AJAX. The
-                    layout of Rainbow Globe Web Tutorials is as follows, on the left sidebar of each page there holds
-                    the terminologies and definitions and on the right sidebar threshold important facts and guidelines
-                    that each web developer should be aware of. Both sidebars hold information that is important to all
-                    units.
-                </p>
                 <button type="button" class="btn btn-warning"
                     onclick="confirm('Are you sure you are ready to start quiz?'); window.location.href='quiz3.html';">Start
                     Quiz</button>
-            </div>
-            <div height="100%" class="col-sm-2">
                 <hr />
-                <h6 class="mt-3">10 Web Development & Web Design Cool Facts</h6>
+
+                <h2>XML</h2>
                 <hr />
-                <div class="card text-light bg-dark pt-3 pb-1 px-3">
-                    <p class="font-weight-bold text-center">First Impression is the Last Impression</p>
+                <p>XML stands for Extensible Markup Language. It has become a standard format for data exchange over the
+                    internet. This markup language can describe any type of data that humans can understand and
+                    computers to easily process. Below is an example of XML describing a baseball player (Deital p.512)
+                </p>
+                <div>
+                    <img src="img/fig15-1_Deital512.png">
                 </div>
-                <hr />
-                <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
+                <p>The structure of XML is similar to HTML5 elements and can even have attributes. The 'tags' in this
+                    case are user defined and therefore there are endless possibilities in representing data.</p>
+                <div class="tutorialSubSection">
+                    <h2>XML Basics</h2>
+                    <hr />
+                    <p>XML has a few basic structures</p>
+                    <ul>
+                        <li><a class="font-weight-bold">Data/ Text Content:</a> in the above example, John is considered to be the
+                            data of the document</li>
+                        <li><a class="font-weight-bold">Element:</a> in the above example, firstName is an element. This will link
+                            the element to its contained data. Note that an XML file should always contain one root
+                            element (ie. player) and element names should not contain any whitespace</li>
+                        <li>It is important to include a root element, match each start tag with an end tag, and to keep
+                            casing uniform since XML is case sensitive</li>
+                        <li><a class="font-weight-bold">Nested Elements:</a> you can nest elements within each other to create a more
+                            detailed and complex XML structure</li>
+                        <li>You should declare your XML version similar to how you declare the information for an HTML5
+                            file. To do this you should follow what's written at line 1 of the example above</li>
+                        <li><a class="font-weight-bold">Type:</a> you can add a type attribute to your XML elements which can help
+                            differentiate between, for example, contact elements where one is of type sender and one is
+                            of type receiver.</li>
+                        <p align="center">&lt;contact type="sender"&gt;Bob&lt;/contact&gt;</p>
+                        <li><a class="font-weight-bold">Namespace:</a> often times there may be elements that you want to be
+                            represented with the same name. Even though XML allows this, it can be hard in terms of
+                            readability and maintainability. You can use namespaces provide organization</li>
+                        <p align="center">&lt;highschool:subject&gt;Science&lt;/highschool:subject&gt;</p>
+                        <p align="center">&lt;university:subject&gt;Physics&lt;/university:subject&gt;</p>
+                    </ul>
+                    <p>You should always ensure your XML is well formed. There are many online resources such as <a
+                            href="https://www.w3schools.com/xml/xml_validator.asp">W3Schools</a> to validate your XML.
+                    </p>
+                    <p>Most XML files can be viewed in a browser without any styling but will usually have a warning at
+                        the top to state no style is associated with it. Although you can still view the XML it's not in
+                        a nice format that the browser can display. You can add a XSL sheet linked to your XML (similar
+                        to the idea of a CSS file to an HTML5 file). <a class="font-weight-bold">XSL</a> stands for Extensible
+                        Stylesheet Language and will be explained later.</p>
+                    <h2>DTD</h2>
+                    <hr />
+                    <p><a class="font-weight-bold">DTD:</a> stands for Docuement type definition. It describes the structure of your
+                        XML file so that an XML parser can verify if your XML document is valid. This will help when it
+                        comes to formatting your XML in a valid and uniform way. XML documents that do not follow the
+                        linked DTD document will display an error. Although you have a well structured document, you may
+                        not have a valid document. However, DTDs have been considered not flexible enough and do not
+                        specify data types. This is where XML schemas come in.</p>
+                    <h2>XML Schema</h2>
+                    <hr />
+                    <p><a class="font-weight-bold">XSD:</a> stands for XML Schema Document. This also describes the elements and
+                        content of your XML document with the added information of data types. XSD are more widely used
+                        to validate XML Documents.</p>
+                    <h2>XSL: Stylesheet</h2>
+                    <hr />
+                    <p>As mentioned above, XSL files specifies how a browser should render the XML file. This will help
+                        us control what elements are headings, paragraphs, or lists! The line below should be added into
+                        your XML file to link your .xsl file.</p>
+                    <p align="center">&lt;?xml-stylesheet href="resume.xsl" type="text/xsl"?&gt;</p>
+                    <p>The following are basic knowledge with XSL:</p>
+                    <ul>
+                        <li><a class="font-weight-bold">Template:</a> templates are used in XSL files to match and specify what nodes
+                            to process. The syntax is as follows:
+                            <p>&lt;xsl:template match = "element"&gt;</p>
+                            <ul>
+                                <li><a class="font-weight-bold">Root Element:</a> match ="/"</li>
+                                <li><a class="font-weight-bold">Specific Element:</a> match ="nameOfElement"</li>
+                                <li><a class="font-weight-bold">Any Element:</a> match ="*"</li>
+                                <li><a class="font-weight-bold">Current Element:</a> match =".", note this should work best within a
+                                    nested match</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>The content of an XSL file is very similar to an HTML5 but its content are the XML values. The
+                        following is an example of how you can set up a XSL to stylish your XML documents (Deital
+                        p.540).</p>
+                    <div>
+                        <img src="img/fig15-19_Deital540.png">
+                    </div>
+
+                    <h1>AJAX</h1><hr />
+                    <p>Ajax stands for Asynchronous Javascript and XML. This makes client side scripting more responsive
+                        to your web system. It send aynchronous request to the server and will not be blocked, therefore
+                        making your webpages more responsive.</p>
+                    <p>Traditionally, a web system has a client side and server side. Ajax is considered to be a middle
+                        tier between the the client and server. Ajax can create a XMLHttpRequest to manage a request and
+                        retrieve the data from the server. While this request has been sent, the user is able to move
+                        on. A good aspect of using Ajax is that it does not require you to reload a page every time a
+                        request is sent. It uses a function known as the <a class="font-weight-bold">callback function</a> that uses
+                        <a class="font-weight-bold">partial page update</a> which will update the specific element rather than the
+                        whole page.</p>
+                    <p>The following image (Deital p.574) gives some insight of how Ajax works.</p>
+                    <div>
+                        <img src="img/fig16-2Deital574.png">
+                    </div>
+                        <h2>Common Ajax Knowledge</h2>
+                        <hr />
+                        <p>Ajax is commonly used through XMLHttpRequests, which was mentioned earlier to be request
+                            manager objects. I t can detect state changes such as onreadystatechange to ensure that the
+                            data requests has been fully sent from the server. The following are some other common
+                            XMLHttpRequest methods</p>
+                        <ul>
+                            <li><a class="font-weight-bold">send():</a> this can sent get, post, etc. to the server and specify the
+                                data to retreive</li>
+                            <li><a class="font-weight-bold">responseXML:</a> retrieves the xml file from the server</li>
+                            <li><a class="font-weight-bold">abort():</a> stops the current request</li>
+                            <li><a class="font-weight-bold">status:</a> a status = 200 means a sucessful request was done. 500 means
+                                an error has occured</li>
+                        </ul>
+                        </div>
+                </div>
+                <div height="100%" class="col-sm-2">
+                    <hr />
+                    <h6 class="mt-3">10 Web Development & Web Design Cool Facts</h6>
+                    <hr />
+                    <div class="card text-light bg-dark pt-3 pb-1 px-3">
+                        <p class="font-weight-bold text-center">First Impression is the Last Impression</p>
+                    </div>
+                    <hr />
+                    <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
                     <p class=" font-weight-bold text-center"> Easy, Easier, Easiest</p>
-                </div>
-                <hr />
-                <div class="card text-light bg-dark pt-3 pb-1 px-3">
-                    <p class="font-weight-bold text-center"> Interrelation of Code and SEO</p>
-                </div>
-                <hr />
-                <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
+                    </div>
+                    <hr />
+                    <div class="card text-light bg-dark pt-3 pb-1 px-3">
+                        <p class="font-weight-bold text-center"> Interrelation of Code and SEO</p>
+                    </div>
+                    <hr />
+                    <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
                     <p class=" font-weight-bold text-center"> More the Lists and Lesser the Paragraphs</p>
-                </div>
-                <hr />
-                <div class="card text-light bg-dark pt-3 pb-1 px-3">
-                    <p class="font-weight-bold text-center"> The Older, the Worst</p>
-                </div>
-                <hr />
-                <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
+                    </div>
+                    <hr />
+                    <div class="card text-light bg-dark pt-3 pb-1 px-3">
+                        <p class="font-weight-bold text-center"> The Older, the Worst</p>
+                    </div>
+                    <hr />
+                    <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
                     <p class=" font-weight-bold text-center"> You can Learn it All Within a Week</p>
-                </div>
-                <hr />
-                <div class="card text-light bg-dark pt-3 pb-1 px-3">
-                    <p class="font-weight-bold text-center"> Won’t Go Out of Your Budget</p>
-                </div>
-                <hr />
-                <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
+                    </div>
+                    <hr />
+                    <div class="card text-light bg-dark pt-3 pb-1 px-3">
+                        <p class="font-weight-bold text-center"> Won’t Go Out of Your Budget</p>
+                    </div>
+                    <hr />
+                    <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
                     <p class=" font-weight-bold text-center"> Targetting the DemoGraphics</p>
-                </div>
-                <hr />
-                <div class="card text-light bg-dark pt-3 pb-1 px-3">
-                    <p class="font-weight-bold text-center"> Making it Go Better with the Smartphones</p>
-                </div>
-                <hr />
-                <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
+                    </div>
+                    <hr />
+                    <div class="card text-light bg-dark pt-3 pb-1 px-3">
+                        <p class="font-weight-bold text-center"> Making it Go Better with the Smartphones</p>
+                    </div>
+                    <hr />
+                    <div class="card text-dark bg-warning pt-3 pb-1 px-3"">
                     <p class=" font-weight-bold text-center"> Web Development is Not Web Design</p>
+                    </div>
+                    <hr />
                 </div>
-                <hr />
             </div>
         </div>
-    </div>
-    <footer class="bg-warning">
-        <p>Copyright &copy; 2020 Rainbow Globe Web Tutorials.</p>
-    </footer>
+        <footer class="bg-warning">
+            <p>Copyright &copy; 2020 Rainbow Globe Web Tutorials.</p>
+        </footer>
 </body>
 
 </html>

@@ -7,3 +7,5 @@ https://www.javatpoint.com/html-mcq
 https://www.w3schools.com/howto/howto_js_slideshow.asp
 https://www.freetimelearning.com/online-quiz/ajax-quiz-section-3.php
 https://engineeringinterviewquestions.com/category/xml-multiple-choice-questions/
+https://jsbeginners.com/mortgage-loan-javascript-calculator/
+https://www.programiz.com/javascript/examples/quadratic-roots

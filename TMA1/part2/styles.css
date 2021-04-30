@@ -1,113 +1,113 @@
 footer {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    left: 0;
-    bottom: 0;
-    color: black;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  color: black;
+  text-align: center;
 }
 
 .title-font {
-    font-family: "Lucida Console", Courier, monospace;
-    color: ivory;
-    font-weight: bold;
+  font-family: "Lucida Console", Courier, monospace;
+  color: ivory;
+  font-weight: bold;
 }
 
 .navigation {
-    height: 40px;
-    width: 100%;
+  height: 40px;
+  width: 100%;
 }
 
 .navigation-logo {
-    position: absolute;
-    left: 38%;
-    display: inline;
+  position: absolute;
+  left: 38%;
+  display: inline;
 }
 
 div.scroll {
-    width: 500px;
-    height: 420px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    text-align: center;
-    padding: 10px;
-    white-space: nowrap;
+  width: 500px;
+  height: 420px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
 }
 
 .sidenav {
-    height: 100%;
-    width: 0px;
-    position: fixed;
-    z-index: 1;
-    top: 40px;
-    left: 0;
-    overflow: auto;
-    transition: 0.5s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  overflow: auto;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2b0202;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2b0202;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #e62626;
+  color: #e62626;
 }
 
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
+  .sidenav {
+    padding-top: 15px;
+  }
 
-    .sidenav a {
-        font-size: 18px;
-    }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 .question {
-    font-size: 30px;
-    font-weight: bold;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .answers {
-    text-align: left;
-    display: inline-block;
+  text-align: left;
+  display: inline-block;
 }
 
 .answers label {
-    display: block;
+  display: block;
 }
 
 .slide {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.5s;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .active-slide {
-    opacity: 1;
-    z-index: 2;
+  opacity: 1;
+  z-index: 2;
 }
 
 .quiz-container {
-    position: relative;
-    height: 300px;
+  position: relative;
+  height: 300px;
 }
