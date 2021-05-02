@@ -1,0 +1,158 @@
+.hmul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.hmli {
+  float: left;
+}
+
+.hmli a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hmli a:hover {
+  background-color: #111;
+  color: ivory;
+  text-decoration: none;
+}
+
+.active {
+  background: #89cff0;
+  color: #111;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: small;
+}
+
+.navigation {
+  height: 40px;
+  width: 100%;
+}
+
+.navigation-logo {
+  position: absolute;
+  left: 38%;
+  display: inline;
+}
+
+div.scroll {
+  width: 500px;
+  height: 420px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+  overflow: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2b0202;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #e62626;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: black;
+  text-align: center;
+}
+
+.title-font {
+  font-family: "Lucida Console", Courier, monospace;
+  color: ivory;
+  font-weight: bold;
+}
+
+.inputStyle {
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 80%;
+  height: 30px;
+  margin-top: 1%;
+  padding-left: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.products {
+    text-align: center;
+}
+
+    .products li {
+        display: inline-block;
+        margin: 5px 5px 15px 5px;
+    }
+
+.productItem, .productPartItem {
+    width: 256px;
+    height: 256px;
+    display: inline-block;
+}
+
+    .productItem:hover, .productPartItem:hover {
+        background-color: #E3E3E3;
+    }
+
+tr {
+    height: 30px;
+}
+
+td {
+    width: 100px;
+}
+
+#pwRecovery {
+    margin: 10px 0 10px 0;
+}
+
+.productItemLabel {
+    margin-left: -50%;
+}

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>TMA3 Main Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
+    <link rel="stylesheet" href="./shared/shared.css" type="text/css" />
+</head>
+    <body>
+        <div>
+            <ul class="hmul">
+                <li class="hmli"><a class="active" href="./tma3.htm">Home</a></li>
+                <li class="hmli"><a href="./part1/CookieTracker.aspx">Part 1</a></li>
+                <li class="hmli"><a href="./part2/Slideshow.aspx">Part 2</a></li>
+                <li class="hmli"><a href="./part3/CompStore.aspx">Part 3</a></li>
+                <li class="hmli"><a href="./part4/CompStore.aspx">Part 4</a></li>
+            </ul>
+            <div class="container-fluid text-center">
+                <div class="row content">
+                    <div height="100%" class="col-sm-2">
+                    </div>
+
+                    <div class="col-sm-8 text-left">
+                        <hr />
+                        <h1>TMA3a</h1>
+                        <hr />
+                        <h4>Advanced Technologies for Web-based Systems | Computer Science 466</h4>
+                        <h5>By Karim El Shenawy | 3471139 </h5>
+                        <h6>Assignment Created: March 22nd 2021 </h6>
+                        <h6>Assignment Completed: April 28th 2021 </h6>
+                        <h6>Estimated Hours Spent: 105</h6>
+                        <hr />
+                        <p>To Run, simply go the the website link <a class="bold" href="http://tma3.azurewebsites.net/tma3a.htm">tma3.azurewebsites.net/tma3a.htm</a></p>
+                        <p>
+                            You can also run the <a class="bold" href="tma3a.htm">tma3a.htm</a> in your local browser after downloading the files.
+                            <hr />
+                        <p>This Assignment is divided in 4 parts that can be accessed through the global top navbar.</p>
+                        <h4>Please Enjoy!</h4>
+                        <hr />
+                        Here are some documentation and comments on each projects:
+
+                        <h4>Part 1</h4>
+                        <ul>
+                            <li>
+                                <span class="font-weight-bold">Description:</span> This section consists of the Online Cookie tracker that tracks the amount of times the user
+                                has visited the site, their IP address an timezone.
+                            </li>
+                            <li>
+                                <span class="font-weight-bold">Analysis:</span> Using Cookies to do all three tasks was pretty straight forward. there are already several implementations available online
+                                I decided however to add a cookie reset and a refresh.
+                            </li>
+                            <li><span class="font-weight-bold">Documentation:</span> I added comments to the code where comments seemed to be needed. Most documentation is referencing to within the code itself. </li>
+                            <li>
+                                <span class="font-weight-bold">User Guide:</span> To begin, follow the following steps:
+                                <ul>
+                                    <li>Click on Part 1 on the global navbar.</li>
+                                    <li>You can view your number of visits, current client's IP and Timezone.</li>
+                                    <li>You can reset the cookie or increase the numebr of visits using the available buttons.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>Part 2</h4>
+                        <ul>
+                            <li>
+                                <span class="font-weight-bold">Description:</span> This section consists of my Book Collection Slideshow that runs automatically or manually depending on the user.
+                            </li>
+                            <li>
+                                <span class="font-weight-bold">Analysis:</span> Used mySQL database to record all the locations of the images. It is similar to my TMA1 implementation
+                                however, I sued mySQL instead of the browser's session. The Shuffle button works at random usig C# rando function.
+                            </li>
+                            <li><span class="font-weight-bold">Documentation:</span> I added comments to the code where comments seemed to be needed. Most documentation is referencing to within the code itself. </li>
+                            <li>
+                                <span class="font-weight-bold">User Guide:</span> To begin, follow the following steps:
+                                <ul>
+                                    <li>Click on Part 2 on the global navbar.</li>
+                                    <li>You can view your My Book collection in a slideshow.</li>
+                                    <li>Youc an play, stop and shuffle the slideshow as well as use the arrows.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>Part 3</h4>
+                        <ul>
+                            <li><span class="font-weight-bold">Description:</span> This section consists of the Online Computer Store portion of the Website. 
+                            The user can log in and browse the available inventory and add the selected items to their cart.</li>
+                            <li>
+                                <span class="font-weight-bold">Analysis:</span> I used several relationships between the user customer ID and their choices. This part 3 focuses more on the frontend as well as 
+                                the general outline functionality of the site. This allows the user to browse around, login and select and add configured Laptops and parts to their cart. Their cart isn't 100% fucntional
+                                as there is no database linked to this part. Part 4 is the more advanced and fully functional website. 
+                            </li>
+                            <li><span class="font-weight-bold">Documentation:</span> I added comments to the code where comments seemed to be needed. Most documentation is referencing to within the code itself. </li>
+                            <li>
+                                <span class="font-weight-bold">User Guide:</span>  To begin, follow the following steps:
+                                <ul>
+                                    <li>Click on Part 3 on the global navbar.</li>
+                                    <li>SignUp by clicking login/signup and inputing a username and password.</li>
+                                    <li>You will be automaitcally logged in. However, you can alternatively login if a user account already created.</li>
+                                    <li>
+                                        Users can then use the left side menu to move around the site.
+                                    </li>
+                                    <li>Users can visit the Feedback page to post a review.</li>
+                                    <li>Users can visit the Contact page to email all employees.</li>
+                                    <li>Users can use the drop down menu to either browse Laptops or Computer parts.</li>
+                                    <li>Users can configure their laptops and add their configuration to their cart.</li>
+                                    <li>Users can always visit their cart from any page.</li>
+                                    <li>Users can also access their login page to logout.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <h4>Part 4</h4>
+                        <ul>
+                            <li><span class="font-weight-bold">Description:</span> This section consists of the Online Computer Store portion of the Website. 
+                            The user can log in and browse the available inventory and add the selected items to their cart.</li>
+                            <li>
+                                <span class="font-weight-bold">Analysis:</span> I used several relationships between the user customer ID and their choices. This part 3 focuses more on the frontend as well as 
+                                the general outline functionality of the site. This allows the user to browse around, login and select and add configured Laptops and parts to their cart. Their cart saves all their sleections
+                                and updates their total fro every newly modified selection and additional parts. 
+                            </li>
+                            <li><span class="font-weight-bold">Documentation:</span> I added comments to the code where comments seemed to be needed. Most documentation is referencing to within the code itself. </li>
+                            <li>
+                                <span class="font-weight-bold">User Guide:</span>  To begin, follow the following steps:
+                                <ul>
+                                    <li>Click on Part 3 on the global navbar.</li>
+                                    <li>SignUp by clicking login/signup and inputing a username and password.</li>
+                                    <li>You will be automaitcally logged in. However, you can alternatively login if a user account already created.</li>
+                                    <li>
+                                        Users can then use the left side menu to move around the site.
+                                    </li>
+                                    <li>Users can visit the Feedback page to post a review.</li>
+                                    <li>Users can visit the Contact page to email all employees.</li>
+                                    <li>Users can use the drop down menu to either browse Laptops or Computer parts.</li>
+                                    <li>Users can configure their laptops and add their configuration to their cart.</li>
+                                    <li>Users can always visit their cart from any page. They can edit their carts as well as finalize their purchases as they dynamically view their total.</li>
+                                    <li>Users can also access their login page to logout.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <hr />
+                        <br>
+                        <br>
+                        <br>
+
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+App {
+  text-align: center;
+  background: tomato;
+}
+
+.title-font {
+  font-family: "Lucida Console", Courier, monospace;
+  color: ivory;
+}
+
+.img-fixed {
+  position: fixed;
+}
+
+.min-h {
+  min-height: 100px;
+}
+
+.bg-red {
+  background: rgb(128, 0, 0);
+  border-bottom: 2px solid black;
+  border-radius: 1px;
+  width: 100%;
+}
+
+.bg-tot {
+  background: rgb(128, 0, 0);
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: antiquewhite;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+.caption-text {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  color: antiquewhite;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+.caption h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  padding-bottom: 1rem;
+}
+
+.caption h3 {
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
+  padding-bottom: 1rem;
+}
+
+/* Video CSS */
+/*--- Bootstrap Mobile Gutter Fix --*/
+/* .row,
+.container-fluid {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+} */
+
+/*--- Fixed Video Background iOS/Mobile Style--*/
+.video-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#video {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: -10;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  /* background: url("") no-repeat; */
+  background-size: cover;
+  transition: 1s opacity;
+}

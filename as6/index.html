@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Tourism Hamilton Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .navbar-blue {
+      background: #00578E;
+    }
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 450px
+    }
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+      .row.content {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-blue">
+    <div class="container-fluid">
+      <a href="https://open.hamilton.ca/">
+        <img src="./logo.png" class="navbar-brand" alt="cityLogo" />
+      </a>
+    </div>
+  </nav>
+
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div height=100% class="col-sm-2 sidenav">
+        <button id="start" class="btn btn-lg btn-primary float-center">Start</button> <hr/>
+        <p class="text-left"><strong>Hey there!</strong> Take a small trip through the city and try visiting our fun activites by saying <br />
+          <ul class="float-left text-left">
+            <li>Show fun attractions</li>
+            <li>Show waterfalls</li>
+            <li>Show music</li>
+          </ul>
+        </p><br/>
+        <div class="well navbar-blue" style="color:ivory;">
+          <a href="https://www.hamilton.ca/hamilton-music-film-office/music-in-hamilton/music-in-hamilton">
+            <img class="rounded" src="./music.jpg" width="180px" height="120px" alt="music" />
+          </a> <br />
+          Catch one of our many local shows!🎵🎸
+        </div>
+        <div class="well navbar-blue" style="color:ivory;">
+          <a href="https://conservationhamilton.ca/spencer-reservations/">
+            <img class="rounded" src="./peak.jpg" width="180px" height="120px" alt="peak" />
+          </a> <br />
+          Come to our very own Dundas Peak hiking trail!🥾⛰️
+        </div>
+        <div class="well navbar-blue" style="color:ivory;">
+          <a href="https://tourismhamilton.com/hamilton-waterfalls-guide">
+            <img class="rounded" src="./waterfalls.jpg" width="180px" height="120px" alt="waterfalls" />
+          </a> <br />
+          Witness many of our world famous waterfalls!🌊⬇️
+        </div>
+      </div>
+      <div class="col-sm-8 text-left">
+        <h1>Welcome to Hamilton Tourism Helper</h1>
+        <h4>Hamilton, ON is a city filled with adventure and activities.</h4>
+        <h7>Use this map to navigate through the Hamilton. To learn more about the city, click on the images on the sidebar to go to a specific interest of yours. Enjoy!</h7> <hr/>
+        <p><strong>Information:</strong> <span id="output"></span></p>
+        <hr>
+        <h3>Map</h3>
+        <div class="well navbar-blue  style="color:ivory;"border-rounded">
+          <div id="myMap" style="width:100%;height:600px;"></div>
+        </div>
+      </div>
+      <div height=100% class="col-sm-2 sidenav">
+        <p class="text-left"><strong>For more information about hamilton</strong> try the following <br />
+          <ul class="float-left text-left">
+            <li>Information about McMaster University</li>
+            <li>Information about City Hall</li>
+            <li>Ancaster Ontario</li>
+            <li>Toronto Ontario</li>
+            <li>Hamilton Ontario</li>
+            <li>Show fire stations</li>
+            <li>Show libraries</li>
+            <li>Clear map</li>
+          </ul>
+        </p>
+        <hr />
+        <div class="well navbar-blue" style="color:ivory;">
+          <a href="https://hamiltonlibraries.co.nz/">
+            <img class="rounded" src="./library.jpg" width="180px" height="120px" alt="library" />
+          </a> <br />
+          Have a relax and productive day in our libraries!📚
+        </div>
+        <div class="well navbar-blue" style="color:ivory;">
+          <a href="https://www.mcmaster.ca/">
+            <img class="rounded" src="./mcmaster.jpg" width="180px" height="120px" alt="mcmaster" />
+          </a> <br />
+          Take a visit at the World class McMaster University!🏫
+        </div>
+        <div class="well navbar-blue" style="color:ivory;">
+          <a href="https://www.youtube.com/watch?v=xMEHrP5lXlw">
+            <img class="rounded" src="./downtown.jpg" width="213px" height="100px" alt="downtown" />
+          </a> <br />
+          Visit Downtown Hamilton and watch it's historic growth!🏢📈
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="container-fluid text-center navbar-blue">
+    © 2020 Copyright:
+    <a href="https://open.hamilton.ca/"> Open Hamilton</a>
+  </footer>
+
+  <!-- Load in the annyang library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+
+  <!-- 
+  Load in fire station data obtained from this data set:
+  https://open.hamilton.ca/datasets/dbb028cd6bcc4b218c607952b760fd04_5
+
+  This JavaScript (JSON) data was obtained by clicking on APIs -> GeoJSON,
+  copying the URL into the browser and hitting enter, I downloaded the 
+  file, saved it as firestations.js, and added "var firestations = " at 
+  the top so I can access the object with that variable name in this script.
+-->
+  <script src="firestations.js"></script>
+
+  <!--- The library location data was obtained in the same way... -->
+  <script src="libraries.js"></script>
+  <script src="attractions.js"></script>
+  <script src="waterfall.js"></script>
+  <script src="music.js"></script>
+
+
+  <script>
+    // Welcome the user after they click the start button
+    document.getElementById("start").onclick = function () {
+      var synth = window.speechSynthesis;
+      var utterText = "Welcome to Hamilton!";
+      var utterThis = new SpeechSynthesisUtterance(utterText);
+      utterThis.pitch = 1.0;
+      utterThis.rate = 0.9;
+      synth.speak(utterThis);
+    }
+
+    if (annyang) {
+
+      // Commands are defined as keys and values in an object, the key is the 
+      // text for the command, and the value is callback function (i.e. event 
+      // handler) to call for the command
+      var commands = {
+
+        // If "information about X" is uttered, we show on the page "Here is some
+        // information about X".  
+        "information about *place": function (place) {
+          document.getElementById("output").innerHTML =
+            "Here is some information about " + place;
+        },
+
+        // If "show firestations" or "show libraries" are uttered, the map will 
+        // be populated with pushpins for firestations or libraries
+        //
+        // We use the firestations.js and libraries.js data above to do so, note 
+        // that we know how to access the data structure be examining the data 
+        // structure... so we can see for example that firestations.features 
+        // contains an array of objects with firestation data, and we can see 
+        // that firestations.features[i].properties contains latitude, longitude
+        // and name data.  
+        //
+        // You could use a tool like this to help you visualize the data:
+        //    http://jsonviewer.stack.hu/
+        //
+        "show *type": function (type) {
+          // if type includes "fire" we assume the user wants to see firestations
+          if (type.includes("fire")) {
+            // loop through the array of firestations in the firestations.js data
+            for (i = 0; i < firestations.features.length; i++) {
+              // add a pushpin to the map for each firestation
+              map.entities.push(
+                new Microsoft.Maps.Pushpin(
+                  new Microsoft.Maps.Location(
+                    // use the latitude & longitude data for the pushpin position
+                    firestations.features[i].properties.LATITUDE,
+                    firestations.features[i].properties.LONGITUDE
+                  ),
+                  // use the firestation name for the label 
+                  {
+                    title: firestations.features[i].properties.NAME
+                  }
+                ));
+            }
+          }
+          // if type includes "libraries" we assume user wants to see libraries
+          else if (type.includes("libraries")) {
+            // loop through the array of libraries in the libraries.js data
+            for (i = 0; i < libraries.features.length; i++) {
+              // add a pushpin to the map for each library
+              map.entities.push(
+                new Microsoft.Maps.Pushpin(
+                  new Microsoft.Maps.Location(
+                    // use the latitude & longitude data for the pushpin position
+                    libraries.features[i].properties.LATITUDE,
+                    libraries.features[i].properties.LONGITUDE
+                  ),
+                  // use the library name for the label 
+                  {
+                    title: libraries.features[i].properties.NAME
+                  }
+                ));
+            }
+          }
+          // if type includes "attractions" we assume user wants to see attractions
+          else if (type.includes("attractions")) {
+            // loop through the array of attractions in the attractions.js data
+            for (i = 0; i < attractions.features.length; i++) {
+              // add a pushpin to the map for each library
+              map.entities.push(
+                new Microsoft.Maps.Pushpin(
+                  new Microsoft.Maps.Location(
+                    // use the latitude & longitude data for the pushpin position
+                    attractions.features[i].properties.LATITUDE,
+                    attractions.features[i].properties.LONGITUDE
+                  ),
+                  // use the library name for the label 
+                  {
+                    title: attractions.features[i].properties.NAME
+                  }
+                ));
+            }
+          }
+          // if type includes "waterfall" we assume user wants to see waterfall
+          else if (type.includes("waterfalls")) {
+            // loop through the array of waterfall in the waterfall.js data
+            for (i = 0; i < waterfall.features.length; i++) {
+              // add a pushpin to the map for each library
+              map.entities.push(
+                new Microsoft.Maps.Pushpin(
+                  new Microsoft.Maps.Location(
+                    // use the latitude & longitude data for the pushpin position
+                    waterfall.features[i].properties.LATITUDE,
+                    waterfall.features[i].properties.LONGITUDE
+                  ),
+                  // use the library name for the label 
+                  {
+                    title: waterfall.features[i].properties.NAME
+                  }
+                ));
+            }
+          }
+          // if type includes "music" we assume user wants to see music
+          else if (type.includes("music")) {
+            // loop through the array of music in the music.js data
+            for (i = 0; i < music.features.length; i++) {
+              // add a pushpin to the map for each library
+              map.entities.push(
+                new Microsoft.Maps.Pushpin(
+                  new Microsoft.Maps.Location(
+                    // use the latitude & longitude data for the pushpin position
+                    music.features[i].properties.LATITUDE,
+                    music.features[i].properties.LONGITUDE
+                  ),
+                  // use the library name for the label 
+                  {
+                    title: music.features[i].properties.NAME
+                  }
+                ));
+            }
+          }
+        },
+
+        // If "clear map" is uttered all pushpins are removed from the map
+        "clear map": function () {
+          // Code to remove all pushpins is taken directly from the API docs:
+          // https://www.bing.com/api/maps/sdkrelease/mapcontrol/isdk/deletepushpins
+          for (i = map.entities.getLength() - 1; i >= 0; i--) {
+            var pushpin = map.entities.get(i);
+            if (pushpin instanceof Microsoft.Maps.Pushpin) {
+              map.entities.removeAt(i);
+            }
+          }
+        },
+
+        // Any other utterance will be caught by this case, and we use the 
+        // Bing Maps geolocation service to find a latitude and longitude 
+        // position based on the utterance:
+        //  https://www.bing.com/api/maps/sdkrelease/mapcontrol/isdk/searchbyaddress#JS
+        // We then place a pushpin on the map at that location.
+        //
+        // So if we say "Dundas, Ontario" or "Toronto, Ontario" it will 
+        // attempt to find the location and put a pushpin on the map there
+        "*catchall": function (catchall) {
+          var requestOptions = {
+            bounds: map.getBounds(),
+            where: catchall,
+            callback: function (answer, userData) {
+              map.setView({
+                bounds: answer.results[0].bestView
+              });
+              map.entities.push(
+                new Microsoft.Maps.Pushpin(
+                  answer.results[0].location, {
+                    title: catchall
+                  }
+                )
+              );
+            }
+          };
+          searchManager.geocode(requestOptions);
+
+        }
+      };
+
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+
+      // Start listening. You can call this here, or attach this call to an event, button, etc.
+      annyang.start({
+        autoRestart: true,
+        continuous: true
+      });
+    }
+
+
+    // Loads the map, called after Bing map library finishes loading
+    function loadmap() {
+      // Create a map centered on Hamilton, Ontario
+      map = new Microsoft.Maps.Map(document.getElementById("myMap"), {
+        center: new Microsoft.Maps.Location(43.2557, -79.8711),
+        // we could set additional options when we create the map...
+        // mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+        // zoom: 12        
+      });
+
+      // Load the search manager that allows us to search for locations 
+      // (lat and long positions) based on an address, e.g. Toronto, Ontario
+      Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+        searchManager = new Microsoft.Maps.Search.SearchManager(map);
+      });
+    }
+  </script>
+  <script
+    src="https://www.bing.com/api/maps/mapcontrol?key=Ao9pr871PkWBHGRHO0L9f_kuQRMt5jgnmM-oQ8i0e6Ll-8DNNEgrcbiHr_wjaKq4&callback=loadmap"
+    async defer></script>
+
+</body>
+
+</html>
